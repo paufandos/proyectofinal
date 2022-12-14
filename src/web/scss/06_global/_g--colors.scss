@@ -1,7 +1,7 @@
 @each $tipoColor in getColorsKeys(){
     @each $variante in getVariantesColorsKeys(){
       $value:getColors($tipoColor, $variante);
-        .g--background-#{$tipoColor}-#{$variante} {
+        .g--background-color-#{$tipoColor}-#{$variante} {
           background-color: $value;
         }
         .g--color-#{$tipoColor}-#{$variante} {

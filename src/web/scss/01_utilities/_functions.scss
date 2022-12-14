@@ -76,7 +76,7 @@
   //FONT-FAMILY
 
   @function getFontFamily($clave){
-    @return map-get($font-family, $clave);
+    @return unquote(map-get($font-family, $clave));
   }
 
   @function getFontFamilyKeys(){
