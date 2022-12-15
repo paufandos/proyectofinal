@@ -18,15 +18,73 @@
     <header>
         <nav class="c-nav">
             <div class="c-nav__item">
-                <img class="c-nav__logo" src="./assets/img/coffees_logo2.png" alt="coffees_logo">
+                <img class="c-nav__logo" src="./assets/img/EduCafe-02.png" alt="educafe_logo">
             </div>
-            <div class="c-nav__item c-nav__item--derecha">
-                <i class="c-icon c-icon--alternativo fa-solid fa-user"></i>
-                <i class="c-icon fa-solid fa-cart-shopping"></i>
+            <div class="c-nav__item  c-nav__item--center">
+            <img class="c-nav__title " src="./assets/img/EducaCafe-3.png" alt="educafe_title">
+            </div> 
+            <div class="c-nav__item">
+                <i class="c-icon c-icon--alternativo fa-solid fa-user" onclick="login()"></i>
+                <i class="c-icon fa-solid fa-cart-shopping" onclick="verCarrito()"></i>
             </div>
         </nav>
     </header>
-    <main class="l-columns-3 g--background-color-principal-7"></main>
+    <main class="l-columns-3" style="background-image: url(./assets/img/pattern-02.jpg);">
+            <div class="c-card">
+              <div class="c-card__nombre">CAFÉS</div>
+              <img
+                src="./assets/img/cafe.jpg"
+                class="c-card__imagen"
+                onclick="mostrarListado()"
+                alt="Cafés"
+              />
+            </div>
+            <div class="c-card">
+              <div class="c-card__nombre">BOCADILLOS</div>
+              <img
+                src="./assets/img/bocata.jpg"
+                class="c-card__imagen"
+                onclick="mostrarListado()"
+                alt="Bocadillos"
+              />
+            </div>
+            <div class="c-card">
+              <div class="c-card__nombre">BEBIDAS</div>
+              <img
+                src="./assets/img/cocacola.jpg"
+                class="c-card__imagen"
+                onclick="mostrarListado()"
+                alt="Bebidas"
+              />
+            </div>
+            <div class="c-card">
+              <div class="c-card__nombre">SALADO</div>
+              <img
+                src="./assets/img/salado.jpg"
+                class="c-card__imagen"
+                onclick="mostrarListado()"
+                alt="Salado"
+              />
+            </div>
+            <div class="c-card">
+              <div class="c-card__nombre">DULCE</div>
+              <img
+                src="./assets/img/dulce.jpg"
+                class="c-card__imagen"
+                onclick="mostrarListado()"
+                alt="Dulce"
+              />
+            </div>
+            <div class="c-card">
+              <div class="c-card__nombre">SNACKS</div>
+              <img
+                src="./assets/img/snacks.jpg"
+                class="c-card__imagen"
+                onclick="mostrarListado()"
+                alt="Snacks"
+              />
+            </div>
+    </main>
     <footer class="c-footer">
         <div class="l-horizontal-space-arround">
             <a class="c-footer__item" href="">Terms</a>
