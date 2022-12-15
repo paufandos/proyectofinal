@@ -2,20 +2,31 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     background-color: getColors("principal", 5);
     padding: getPadding(3);
 
     &__item {
-        margin: getMargin(3);
+        margin: getMargin(2);
 
         &--derecha {
             margin-left: auto;
         }
+
+        &--center {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__logo {
-        width: 75px;
+        height: 120px;
+        cursor: pointer;
+    }
+
+    &__title {
+        margin-left: auto;
+        height: 110px;
+        align-items: center;
     }
 
 }
