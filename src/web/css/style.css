@@ -659,10 +659,9 @@ table {
   flex-wrap: wrap;
   align-items: center;
   background-color: #D6C9B8;
-  padding: 8px;
 }
 .c-nav__item {
-  margin: 6px;
+  margin: 10px;
 }
 .c-nav__item--derecha {
   margin-left: auto;
@@ -672,12 +671,13 @@ table {
   margin-right: auto;
 }
 .c-nav__logo {
-  height: 120px;
+  height: 80px;
   cursor: pointer;
+  padding-left: 40px;
 }
 .c-nav__title {
   margin-left: auto;
-  height: 110px;
+  height: 80px;
   align-items: center;
 }
 
@@ -709,11 +709,10 @@ table {
   text-align: center;
   height: 400px;
   width: 400px;
-  margin: 16px 16px 16px 16px;
+  margin: 48px 16px 16px 16px;
   border-radius: 16px;
 }
 .c-card__nombre {
-  padding: auto;
   background-color: #BAA187;
   color: #FAFAFA;
   font-size: 30px;
