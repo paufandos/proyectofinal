@@ -3,10 +3,9 @@
     flex-wrap: wrap;
     align-items: center;
     background-color: getColors("principal", 5);
-    padding: getPadding(3);
 
     &__item {
-        margin: getMargin(2);
+        margin: getMargin(4);
 
         &--derecha {
             margin-left: auto;
@@ -19,13 +18,14 @@
     }
 
     &__logo {
-        height: 120px;
+        height: 80px;
         cursor: pointer;
+        padding-left: getPadding(10);
     }
 
     &__title {
         margin-left: auto;
-        height: 110px;
+        height: 80px;
         align-items: center;
     }
 
