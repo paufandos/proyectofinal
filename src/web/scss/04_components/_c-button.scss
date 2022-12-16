@@ -1,7 +1,25 @@
 .c-button {
-    color: getColors("rojo",5);
-    @include box-shadow(2);
-    //border-radius: getBorderRadius(2) ;
-    @include border-radius(5);
-    
-  }
+  color: getColors("blanco",7);
+  font-size: getFontSize("s");
+  background-color: getColors("principal",0);
+  padding-left: getPadding(6); 
+  padding-right: getPadding(6); 
+  padding-top: getPadding(3); 
+  padding-bottom: getPadding(3); 
+  margin-top: getMargin(4);
+  @include border-radius(5);
+  cursor:pointer;
+  margin: auto;
+  font-weight: bold;
+}
+
+.c-button--principal {
+  margin-left: 50px;
+}
+
+.c-button--alternativo {
+  background-color: getColors("principal",5);
+  color: getColors("principal",0);
+  margin-left: 50px;
+  margin: auto;
+}

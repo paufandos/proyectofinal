@@ -1,6 +1,6 @@
 .l-columns-3 {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr ));
+    grid-template-columns: repeat(3, minmax(100px, 1fr ));
     gap: getGap(6);
 }

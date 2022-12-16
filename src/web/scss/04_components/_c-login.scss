@@ -1,0 +1,59 @@
+.c-login {
+  font-family: getFontFamily("principal");
+  background-color: #9B7559;
+  border-radius: 8px;
+  border-color: 5px solid #825F4A;
+  margin: getMargin(5);
+  padding: getPadding(8);
+  width: 350px;
+  height: 300px;
+  margin-bottom: getMargin(6);
+}
+
+.c-login-presentation {
+  font-family: getFontFamily("principal");
+  color: getColors("principal",0);
+  font-weight: bold;
+  font-size: getFontSize("2xl");
+  text-align: center;
+}
+
+.c-login__label{
+  font-weight: bold;
+  font-size: getFontSize("s");
+  text-align: left;
+  color: getColors("blanco",5);
+  margin-top: getMargin(4);
+  margin-bottom: getMargin(9);
+  padding-bottom: getPadding(5);
+}
+
+.c-login__input{
+font-size: getFontSize("s");
+color: getColors("principal",0);
+display: block;
+width: 100%;
+height: 35px;
+margin-top: getMargin(2);
+margin-bottom: getMargin(7);
+padding-left: getPadding(5);
+}
+
+.c-login__contenido{
+display: block;
+text-align: center;
+text-decoration: none;
+color: getColors("alternativo",4); 
+margin-top: getPadding(8);
+}
+
+.c-login__link {
+display: block;
+text-align: center;
+text-decoration: none;
+font-weight: 500;
+color: getColors("blanco",1); ;
+font-size: getFontSize("xs");
+margin-bottom: getMargin(3);
+
+}
