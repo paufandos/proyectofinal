@@ -1,0 +1,38 @@
+.c-form-login-derecha {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-family: getFontFamily("principal");
+  padding:getPadding(8);
+  font-size: getFontSize("s");
+  color: getColors("alternativo",1);
+  background-color: getColors("principal",5);
+  margin-top: getMargin(7);
+  height: 350px;
+  width: 320px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.c-form-login-derecha__titulo{
+  display: block;
+  font-size: getFontSize("3xl");
+  color: getColors("principal",0);
+  text-align: center;
+}
+
+.c-form-login-derecha__cuerpo{
+  display: block;
+  font-size: getFontSize("s");
+  color: getColors("alternativo",1);
+  text-align: center;
+  padding: getPadding(1); 
+  margin-bottom: getMargin(1); 
+}
+
+.c-form-login-derecha__link{
+  display: block;
+  text-decoration: none;
+  color: getColors("alternativo",4); ;
+  margin: getMargin(1);
+}
