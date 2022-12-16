@@ -16,7 +16,7 @@
   <script src="./js/datos.js"></script>
   <script src="./js/tienda.js"></script>
 
-  <title>Coffees</title>
+  <title>Educafe</title>
 </head>
 
 <body>
@@ -35,11 +35,12 @@
     </nav>
   </header>
   <main id="main" class="c-main">
-    <div class="l-columns-3">
-      <div class="c-card">
-        <div class="c-card__nombre">CAFÉS</div>
+    <div id="l-columns-3" class="l-columns-3">
+    <!--  <div class="c-card">
+  
+       <div class="c-card__nombre">CAFÉS</div>
         <img src="./assets/img/cafe.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Cafés" />
-      </div>
+      </div> 
       <div class="c-card">
         <div class="c-card__nombre">BOCADILLOS</div>
         <img src="./assets/img/bocata.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Bocadillos" />
@@ -59,7 +60,7 @@
       <div class="c-card">
         <div class="c-card__nombre">SNACKS</div>
         <img src="./assets/img/snacks.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Snacks" />
-      </div>
+      </div> -->
     </div>
     <div class="c-products">
       <div class="c-item">
@@ -86,9 +87,14 @@
     </div>
     <div class="c-footer__item c-footer__item--blanco">Pavela Enterprise &copy; 2022-2023</div>
   </footer>
-</body>
 
-<dialog id="login"></dialog>
+  <dialog id="dialog" class="c-modal">
+
+  </dialog>
+
+
+</dialog>
+
 <dialog id="carrito"></dialog>
 <dialog id="historialCarrito"></dialog>
 <dialog id="detalleProducto"></dialog>

@@ -9,15 +9,16 @@ function mostrarModal(modal) {
     document.getElementById(modal).showModal();
 }
 
-function pintarCategorias(){
-    let main = document.getElementById("main");
-    main.innerHTML = `<div class="l-columns-3"></div>`;
 
-    let layout = main.getElementById("l-columns-3");
+function pintarCategorias(){
+    //let main = document.getElementById("main");
+    //main.innerHTML = `<div class="l-columns-3"></div>`;
+
+    let layout = document.getElementById("l-columns-3");
     datos.forEach(cat => {
-       layout.innerHTML += `<div id="cat-${nombre}" class="c-card">
+       layout.innerHTML += `<div id="cat-${cat.nombre}" class="c-card">
                             <div class="c-card__nombre">${cat.nombre}</div>
-                            <img src="./assets/img/cafe.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Cafés" />
+                            <img src="./assets/img/${cat.nombre}.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="${cat.nombre}" />
                         </div>`; 
     });
 
@@ -25,4 +26,10 @@ function pintarCategorias(){
     cartas.forEach( c => {
         c.onclick = pintarArticulos(c.id);
     });
+}
+
+function pintarArticulos(){
+
+
+
 }
