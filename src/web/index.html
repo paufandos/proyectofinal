@@ -8,10 +8,12 @@
     <meta name="author" content="Grupo A">
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <style> @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap'); </style>
     <script src="https://kit.fontawesome.com/16ac316f21.js" crossorigin="anonymous"></script>
 
-    <title>Coffees</title>
+    <title>EduCafe</title>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             <img class="c-nav__title " src="./assets/img/EducaCafe-3.png" alt="educafe_title">
             </div> 
             <div class="c-nav__item">
-                <i class="c-icon c-icon--alternativo fa-solid fa-user" onclick="login()"></i>
+                <i class="c-icon c-icon--alternativo fa-solid fa-user" onclick="window.formLogin.showModal()"></i>
                 <i class="c-icon fa-solid fa-cart-shopping" onclick="verCarrito()"></i>
             </div>
         </nav>
@@ -85,6 +87,42 @@
               />
             </div>
     </main>
+
+    <!-- Componente HTML para dialogos modal FORMULARIO -->
+	  <dialog class="c-modal" id="formLogin">
+      <div class="l-posicion-modal">
+        <div class=" l-posicion-modal--centrada" id="contenedorCentrado">
+            <form class="c-form-login">
+                <label class="c-form-login__label" for="usuario">Usuario</label>
+                <input class="c-form-login__input" id="usuario" type="text" name="usuario" placeholder="Usuario">
+
+                <label class="c-form-login__label" for="password">Contraseña</label>
+                <input class="c-form-login__input" id="password" type="password" placeholder="Contraseña" name="password">
+
+                <div class="c-form-login__contenido"></div>
+                    <button class="c-button" type="submit" title="Ingresar" name="Ingresar">Inicia sesión</button><br><br>
+                    <a class="c-form-login__link" href="#">¿Has olvidado tu contraseña?</a>
+                </div>
+            </form>
+            <div class="c-form-login-derecha" id="derecha">
+                <div class="c-form-login-derecha__titulo">
+                    Bienvenido a
+                </div>
+               
+                <div class="c-form-login-derecha__cuerpo">
+                  <img src="./assets/img/eduCafe-02.png" style="width: 280px;" alt="educafe_logo" onclick="inicio()">
+                </div>
+
+                <div>
+                    <a class="c-form-login-derecha__link" href="#">¿No tienes Cuenta? Regístrate</a>
+                    <button class="c-button">Regístrarse</button>&nbsp;&nbsp;&nbsp;
+                    <button class="c-button c-button--alternativo" onclick="window.formLogin.close();" href="#">Cerrar</button>
+                </div>
+            </div>
+        </div>
+      </div>
+	  </dialog>
+
     <footer class="c-footer">
         <div class="l-horizontal-space-arround">
             <a class="c-footer__item" href="">Terms</a>
