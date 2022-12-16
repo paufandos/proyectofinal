@@ -113,3 +113,8 @@
     }
     @return $arrayKeys;
 }
+
+//BACKGROUND IMAGES
+@function getBackgroundImage($clave){
+  @return map-get($background-images, $clave);
+}

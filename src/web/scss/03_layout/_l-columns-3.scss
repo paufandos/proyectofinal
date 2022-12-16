@@ -1,10 +1,6 @@
 .l-columns-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    height: 1000px;
-    
-
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: getGap(6);
 }

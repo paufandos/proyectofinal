@@ -2,97 +2,94 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Grupo A">
-    
-    <link rel="stylesheet" href="css/style.css">
-    <style> @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap'); </style>
-    <script src="https://kit.fontawesome.com/16ac316f21.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Grupo A">
 
-    <title>Coffees</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+  </style>
+
+  <script src="https://kit.fontawesome.com/16ac316f21.js" crossorigin="anonymous"></script>
+  <script src="./js/datos.js"></script>
+  <script src="./js/tienda.js"></script>
+
+  <title>Coffees</title>
 </head>
 
 <body>
-    <header>
-        <nav class="c-nav">
-            <div class="c-nav__item">
-                <img class="c-nav__logo" src="./assets/img/logo-01.png" alt="educafe_logo" onclick="inicio()">
-            </div>
-            <div class="c-nav__item  c-nav__item--center">
-            <img class="c-nav__title " src="./assets/img/EducaCafe-3.png" alt="educafe_title">
-            </div> 
-            <div class="c-nav__item">
-                <i class="c-icon c-icon--alternativo fa-solid fa-user" onclick="login()"></i>
-                <i class="c-icon fa-solid fa-cart-shopping" onclick="verCarrito()"></i>
-            </div>
-        </nav>
-    </header>
-    <main class="l-columns-3" style="background-image: url(./assets/img/pattern-02.jpg);">
-            <div class="c-card">
-              <div class="c-card__nombre">CAFÉS</div>
-              <img
-                src="./assets/img/cafe.jpg"
-                class="c-card__imagen"
-                onclick="mostrarListado()"
-                alt="Cafés"
-              />
-            </div>
-            <div class="c-card">
-              <div class="c-card__nombre">BOCADILLOS</div>
-              <img
-                src="./assets/img/bocata.jpg"
-                class="c-card__imagen"
-                onclick="mostrarListado()"
-                alt="Bocadillos"
-              />
-            </div>
-            <div class="c-card">
-              <div class="c-card__nombre">BEBIDAS</div>
-              <img
-                src="./assets/img/cocacola.jpg"
-                class="c-card__imagen"
-                onclick="mostrarListado()"
-                alt="Bebidas"
-              />
-            </div>
-            <div class="c-card">
-              <div class="c-card__nombre">SALADO</div>
-              <img
-                src="./assets/img/salado.jpg"
-                class="c-card__imagen"
-                onclick="mostrarListado()"
-                alt="Salado"
-              />
-            </div>
-            <div class="c-card">
-              <div class="c-card__nombre">DULCE</div>
-              <img
-                src="./assets/img/dulce.jpg"
-                class="c-card__imagen"
-                onclick="mostrarListado()"
-                alt="Dulce"
-              />
-            </div>
-            <div class="c-card">
-              <div class="c-card__nombre">SNACKS</div>
-              <img
-                src="./assets/img/snacks.jpg"
-                class="c-card__imagen"
-                onclick="mostrarListado()"
-                alt="Snacks"
-              />
-            </div>
-    </main>
-    <footer class="c-footer">
-        <div class="l-horizontal-space-arround">
-            <a class="c-footer__item" href="">Terms</a>
-            <a class="c-footer__item" href="">Policy</a>
-            <a class="c-footer__item" href="">Contact</a>
+  <header>
+    <nav class="c-nav">
+      <div class="c-nav__item">
+        <img class="c-nav__logo" src="./assets/img/logo-01.png" alt="educafe_logo" onclick="inicio()">
+      </div>
+      <div class="c-nav__item  c-nav__item--center">
+        <img class="c-nav__title " src="./assets/img/EducaCafe-3.png" alt="educafe_title">
+      </div>
+      <div class="c-nav__item">
+        <i id="login_icon" class="c-icon c-icon--alternativo fa-solid fa-user"></i>
+        <i id="cart_icon" class="c-icon fa-solid fa-cart-shopping"></i>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="c-main">
+    <div class="l-columns-3">
+      <div class="c-card">
+        <div class="c-card__nombre">CAFÉS</div>
+        <img src="./assets/img/cafe.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Cafés" />
+      </div>
+      <div class="c-card">
+        <div class="c-card__nombre">BOCADILLOS</div>
+        <img src="./assets/img/bocata.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Bocadillos" />
+      </div>
+      <div class="c-card">
+        <div class="c-card__nombre">BEBIDAS</div>
+        <img src="./assets/img/cocacola.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Bebidas" />
+      </div>
+      <div class="c-card">
+        <div class="c-card__nombre">SALADO</div>
+        <img src="./assets/img/salado.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Salado" />
+      </div>
+      <div class="c-card">
+        <div class="c-card__nombre">DULCE</div>
+        <img src="./assets/img/dulce.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Dulce" />
+      </div>
+      <div class="c-card">
+        <div class="c-card__nombre">SNACKS</div>
+        <img src="./assets/img/snacks.jpg" class="c-card__imagen" onclick="mostrarListado()" alt="Snacks" />
+      </div>
+    </div>
+    <div class="c-products">
+      <div class="c-item">
+        <div class="c-item__img">
+          <div class="c-item__title">Lomo Papas</div>
         </div>
-        <div class="c-footer__item c-footer__item--blanco">Pavela Enterprise &copy; 2022-2023</div>
-    </footer>
+        <div class="c-item__footer">
+          <div class="c-item__icon c-item__icon--left">
+            <i class="c-icon fa-solid fa-circle-info"></i>
+          </div>
+          <div class="c-item__price">2.50 €</div>
+          <div class="c-item__icon c-item__icon--right">
+            <i class="c-icon c-icon--alternativo fa-solid fa-cart-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="c-footer">
+    <div class="l-flex l-flex--justify-content-center l-flex--align-items-center">
+      <a class="c-footer__item" href="">Terminos</a>
+      <a class="c-footer__item" href="">Politica de privacidad</a>
+      <a class="c-footer__item" href="">Contacto</a>
+    </div>
+    <div class="c-footer__item c-footer__item--blanco">Pavela Enterprise &copy; 2022-2023</div>
+  </footer>
 </body>
 
+<dialog id="login"></dialog>
+<dialog id="carrito"></dialog>
+<dialog id="historialCarrito"></dialog>
+<dialog id="detalleProducto"></dialog>
 </html>
