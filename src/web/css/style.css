@@ -624,11 +624,6 @@ table {
 
 .l-columns-3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  height: 1000px;
   justify-content: center;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 16px;
@@ -658,7 +653,6 @@ table {
   background-color: #D6C9B8;
 }
 .c-nav__item {
-  margin: 10px;
   margin-top: 8px;
   margin-bottom: 8px;
   margin-left: 64px;
@@ -674,7 +668,6 @@ table {
 .c-nav__logo {
   height: 80px;
   cursor: pointer;
-  padding-left: 40px;
 }
 .c-nav__title {
   margin-left: auto;

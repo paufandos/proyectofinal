@@ -1,6 +1,8 @@
 $colors: (
-    "principal":(#825F4A, #9B7559, #AB896D, #BAA187, #C7B49E, #D6C9B8, #E3DBCE, #F2EFE8, #FFFFFF),
-    "alternativo":(#060D14, #12293F, #20456F, #2D5A9A, #396FC6, #6589D2, #94ABE0, #C0CBED, #EBEEF9),
+    "principal":(#823f44, #9B7559, #AB896D, #BAA187, #C7B49E, #D6C9B8, #E3DBCE, #F2EFE8, #FFFFFF),
+    
+    "alternativo":(#011907, #0F431E, #29653D, #487F5D, #619E7A, #80B79A, #9DD7BA, #BCF0D9, #E6FEF4),
+
     "naranja":(#f9efd3, #f8dfad, #f5cd88, #f6b860, #fd9132, #fd7804, #d56701, #935203, #4b2d01),
 
     "gris":(#f9efd3, #bcbcbc, #868585, #7e7d7d, #636362, #454444, #3b3b3b, #1b1b1b, #050505),
@@ -54,7 +56,17 @@ $padding-values: (
     128px
 );
 
-$font-size:("xs":12px,"s":14px,"m":16px,"l":18px,"xl":20px,"2xl":24px,"3xl":30px,"4xl":36px,);
+$font-size: (
+    "xs":12px,
+    "s":14px,
+    "m":16px,
+    "l":18px,
+    "xl":20px,
+    "2xl":24px,
+    "3xl":30px,
+    "4xl":36px,
+    "5xl":40px
+);
 
 $border-radius: (
     0px,
