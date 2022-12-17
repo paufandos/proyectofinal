@@ -91,7 +91,7 @@
   </footer>
 
 
-<!-- Componente HTML para dialogos modal FORMULARIO -->
+<!-- Componente HTML para dialogos modal FORMULARIO LOGIN -->
 <dialog id="login" class="c-modal">
   <div class="c-modal__content">
     <form class="c-login">
@@ -118,10 +118,42 @@
         <button class="c-button ">Regístrarse</button>&nbsp;&nbsp;&nbsp;
         <button class="c-button c-button--alternativo" onclick="window.login.close();" href="#">Cerrar</button> 
       </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Componente HTML para dialogos modal FORMULARIO DE PAGO -->
+<dialog id="pago" class="c-modal">
+  <div class="c-modal__content">
+    <form class="c-pago">
+      <label class="c-pago__label" for="usuario">Usuario</label>
+      <input class="c-pago__input" id="usuario" type="text" name="usuario" placeholder="escribe aquí tu nombre de usuario">
+
+      <label class="c-pago__label" for="password">Contraseña</label>
+      <input class="c-pago__input" id="password" type="password" placeholder="escribe aquí tu contraseña" name="password">
+
+      <div class="c-pago__contenido">
+          <button class="c-button" type="submit" title="Ingresar" name="Ingresar">Inicia sesión</button><br><br>
+          <a class="c-pago__link" href="#">¿Has olvidado tu contraseña?</a>
+      </div>
+    </form>
+    <div class="c-pago-presentation">
+      <div>
+        Bienvenido a
+      </div>
+      <div>
+        <img src="./assets/img/eduCafe-02.png" style="width: 300px;" alt="educafe_logo" onclick="inicio()">
+      </div>
+      <div>
+        <a class="c-pago__link" href="#">¿No tienes cuenta? Regístrate</a>
+        <button class="c-button ">Regístrarse</button>&nbsp;&nbsp;&nbsp;
+        <button class="c-button c-button--alternativo" onclick="window.login.close();" href="#">Cerrar</button> 
+      </div>
       
     </div>
   </div>
 </dialog>
+
 
 
 <dialog id="carrito"></dialog>
