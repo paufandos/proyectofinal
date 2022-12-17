@@ -5,7 +5,10 @@
     background-color: getColors("principal", 5);
 
     &__item {
-        margin: getMargin(4);
+        margin-top: getMargin(3);
+        margin-bottom: getMargin(3);
+        margin-left: getMargin(12);
+        margin-right: getMargin(12);
 
         &--derecha {
             margin-left: auto;
@@ -20,7 +23,6 @@
     &__logo {
         height: 80px;
         cursor: pointer;
-        padding-left: getPadding(10);
     }
 
     &__title {

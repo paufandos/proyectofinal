@@ -629,6 +629,9 @@ table {
   justify-items: center;
   align-items: center;
   height: 1000px;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 16px;
 }
 
 .l-horizontal-space-arround {
@@ -636,12 +639,6 @@ table {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-}
-
-.c-panel {
-  -webkit-box-shadow: 0 4px 6px darkgray;
-  -moz-box-shadow: 0 4px 6px darkgray;
-  box-shadow: 0 4px 6px darkgray;
 }
 
 .c-button {
@@ -662,6 +659,10 @@ table {
 }
 .c-nav__item {
   margin: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 64px;
+  margin-right: 64px;
 }
 .c-nav__item--derecha {
   margin-left: auto;
@@ -687,6 +688,7 @@ table {
   margin: 12px;
   cursor: pointer;
 }
+
 .c-footer {
   display: flex;
   flex-direction: column;
@@ -734,6 +736,70 @@ table {
   cursor: pointer;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
+}
+
+.c-main {
+  background-image: url("../assets/img/pattern-02.jpg");
+  background-repeat: repeat-y;
+  padding: 64px;
+}
+.c-main--background-dark {
+  background-image: url("../assets/img/pattern-03.jpg");
+}
+.c-main--background-light {
+  background-image: url("../assets/img/pattern-01.jpg");
+}
+
+.c-products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 16px;
+  height: auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: #D6C9B8;
+}
+
+.c-item {
+  background-color: #E3DBCE;
+  border-radius: 16px;
+}
+.c-item__img {
+  height: 350px;
+  object-fit: cover;
+  background-image: linear-gradient(to bottom, rgba(252, 252, 252, 0), 75%, #e3dbce), url("../assets/img/dulce.jpg");
+  background-size: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.c-item__title {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  color: #E3DBCE;
+  padding: 12px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color: #823f44;
+}
+.c-item__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.c-item__price {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+.c-item__icon--right {
+  margin-left: auto;
+}
+.c-item__icon--left {
+  margin-right: auto;
 }
 
 .g--background-color-principal-0 {

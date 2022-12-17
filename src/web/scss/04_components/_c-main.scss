@@ -1,0 +1,17 @@
+.c-main{
+    background-image: url(getBackgroundImage("medium"));
+    background-repeat: repeat-y;
+    padding: getPadding(12);
+
+    &--background-light{
+        background-image: url(getBackgroundImage("light"));
+    }
+
+    &--background-semi-dark{
+        background-image: url(getBackgroundImage("semi-dark"));
+    }
+
+    &--background-dark{
+        background-image: url(getBackgroundImage("dark"));
+    }
+}

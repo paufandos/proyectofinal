@@ -9,22 +9,20 @@
 
 @import
 "03_layout/l-flex",
-"03_layout/l-columns-3",
-"03_layout/l-horizontal",
-"03_layout/l-posicion-modal";
+"03_layout/l-columns-3";
 
 @import
-"04_components/c-modal",
-"04_components/c-panel",
 "04_components/c-button",
 "04_components/c-nav",
 "04_components/c-icon",
 "04_components/c-footer",
-"04_components/c-form-login",
-"04_components/c-form-login-derecha",
-"04_components/c-form-pago",
+"04_components/c-card",
+"04_components/c-main",
+"04_components/c-products",
+"04_components/c-login",
+"04_components/c-modal",
+"04_components/c-item";
 
-"04_components/c-card";
 
 @import
 "06_global/g--colors",
