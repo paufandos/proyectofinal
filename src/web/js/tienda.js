@@ -1,6 +1,6 @@
 window.onload = ()=>{
     //document.getElementById("login_icon").onclick= () => mostrarModal("dialogLogin");
-    document.getElementById("cart_icon").onclick= () => mostrarModal("carrito");
+    // document.getElementById("cart_icon").onclick= () => mostrarModal("carrito");
     pintarCategorias();
 
 };

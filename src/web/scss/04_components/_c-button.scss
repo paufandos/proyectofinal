@@ -8,9 +8,12 @@
   padding-bottom: getPadding(3); 
   margin-top: getMargin(4);
   @include border-radius(5);
-  cursor:pointer;
+  cursor: pointer;
   margin: auto;
   font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  font-family: getFontFamily("principal");
 }
 
 .c-button--principal {
@@ -22,4 +25,9 @@
   color: getColors("principal",0);
   margin-left: 50px;
   margin: auto;
+}
+
+.c-button--warning {
+  background-color: transparent;
+  color: getColors("rojo",4);
 }

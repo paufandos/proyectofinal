@@ -6,32 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Grupo A">
-<<<<<<< HEAD
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/main.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
-  </style>
-
-  <script src="https://kit.fontawesome.com/16ac316f21.js" crossorigin="anonymous"></script>
-  <script src="./js/datos.js"></script>
-  <script src="./js/tienda.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Grupo A">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <style> @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap'); </style>
-    <script src="https://kit.fontawesome.com/16ac316f21.js" crossorigin="anonymous"></script>
-
-  <title>Educafe</title>
-    <title>EduCafe</title>
-=======
-
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/main.css">
   <style>
@@ -43,7 +17,6 @@
   <script src="./js/tienda.js"></script>
 
   <title>Educafe</title>
->>>>>>> joseluis
 </head>
 
 <body>
@@ -57,7 +30,8 @@
       </div>
       <div class="c-nav__item">
         <i id="login_icon" class="c-icon fa-solid fa-user" onclick="window.login.showModal()"></i>
-        <i id="cart_icon" class="c-icon fa-solid fa-cart-shopping"></i>
+        <i id="cart_icon" class="c-icon fa-solid fa-cart-shopping" onclick="window.carrito.showModal()"></i>
+        <i class="c-icon fa-solid fa-rectangle-list" onclick="window.historialCarrito.showModal()"></i>
       </div>
     </nav>
   </header>
@@ -132,14 +106,154 @@
   </dialog>
 
   <!-- Componente HTML para dialogos modal CARRITO -->
-  <dialog id="carrito">
-
-
+  <dialog id="carrito" class="c-modal">
+    <div class="c-cart">
+      <div class="c-cart__title">Carrito 247</div>
+      <div class="c-cart__head">
+        <div></div>
+        <div>Nombre</div>
+        <div>Descripción</div>
+        <div>Precio</div>
+        <div>Unidades</div>
+        <div>Total</div>
+        <div></div>
+      </div>
+      <div class="c-cart__row">
+        <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Lomo Papas</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>2,5€</div>
+        <div>2</div>
+        <div>5€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__row">
+        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Bocadillo pequeño</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>2€</div>
+        <div>1</div>
+        <div>2€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__row">
+        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Paninis</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>1,2€</div>
+        <div>3</div>
+        <div>3,60€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__price">Total: 10,60€</div>
+      <div class="c-cart__footer">
+        <a href="#" class="c-button">Confirmar carrito</a>
+        <a href="#" class="c-button c-button--alternativo" onclick="window.carrito.close()">Seguir comprando</a>
+      </div>
+    </div>
   </dialog>
 
   <!-- Componente HTML para dialogos modal HISTORIAL CARRITO -->
-  <dialog id="historialCarrito">
+  <dialog id="historialCarrito" class="c-modal">
+    <div class="c-title">Listado carritos</div>
+    <div class="c-cart c-cart--list-item">
+      <div class="l-flex l-flex--justify-content-space-between">
+        <div class="c-cart__title">Carrito 247</div>
+        <div class="c-cart__label c-cart__label--unpaid">PENDIENTE DE PAGO</div>
+      </div>
+      <div class="c-cart__head">
+        <div></div>
+        <div>Nombre</div>
+        <div>Descripción</div>
+        <div>Precio</div>
+        <div>Unidades</div>
+        <div>Total</div>
+        <div></div>
+      </div>
+      <div class="c-cart__row">
+        <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Lomo Papas</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>2,5€</div>
+        <div>2</div>
+        <div>5€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__row">
+        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Bocadillo pequeño</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>2€</div>
+        <div>1</div>
+        <div>2€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__row">
+        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Paninis</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>1,2€</div>
+        <div>3</div>
+        <div>3,60€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__footer">
+        <div class="c-cart__price">Total: 10,60€</div>
+        <a href="#" class="c-button">Pagar</a>
+        <a href="#" class="c-button c-button--alternativo">Recuperar</a>
+        <a href="#" class="c-button c-button--warning">Borrar</a>
+      </div>
+    </div>
 
+    <div class="c-cart c-cart--list-item">
+      <div class="l-flex l-flex--justify-content-space-between">
+        <div class="c-cart__title">Carrito 246</div>
+        <div class="c-cart__label c-cart__label--paid">PAGADO</div>
+      </div>
+      <div class="c-cart__head">
+        <div></div>
+        <div>Nombre</div>
+        <div>Descripción</div>
+        <div>Precio</div>
+        <div>Unidades</div>
+        <div>Total</div>
+        <div></div>
+      </div>
+      <div class="c-cart__row">
+        <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Lomo Papas</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>2,5€</div>
+        <div>1</div>
+        <div>2,5€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__row">
+        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Bocadillo pequeño</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>2€</div>
+        <div>2</div>
+        <div>4€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__row">
+        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+        <div>Paninis</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div>1,2€</div>
+        <div>1</div>
+        <div>1,2€</div>
+        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
+      </div>
+      <div class="c-cart__footer">
+        <div class="c-cart__price">Total: 7,7€</div>
+      </div>
+    </div>
+    <div class="c-cart__footer">
+      <a href="#" class="c-button" onclick="window.historialCarrito.close()">Cerrar</a>
+    </div>
+  </div>
   </dialog>
 
   <!-- Componente HTML para dialogos modal FORMULARIO DE PAGO -->
