@@ -1263,7 +1263,7 @@ table {
 
 .c-main {
   background-image: url("../assets/img/pattern-02.jpg");
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   padding: 64px;
 }
 .c-main--background-light {
