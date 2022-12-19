@@ -202,13 +202,13 @@ let datos = [
             },
             {
                 "id": "30",
-                "nombre": "",
+                "nombre": "Hojaldre de carne",
                 "descripcion": "",
                 "precio": 1.5
             },
             {
                 "id": "31",
-                "nombre": "",
+                "nombre": "Tartaleta de queso",
                 "descripcion": "",
                 "precio": 1.5
             }
@@ -262,13 +262,13 @@ let datos = [
             },
             {
                 "id": "36",
-                "nombre": "Bolsas de chuches",
+                "nombre": "Bolsas de chuches grande",
                 "descripcion": "",
                 "precio": 1
             },
             {
                 "id": "36",
-                "nombre": "Bolsas de chuches",
+                "nombre": "Bolsas de chuches pequeña",
                 "descripcion": "",
                 "precio": 0.5
             }

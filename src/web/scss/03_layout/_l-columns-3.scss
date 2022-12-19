@@ -2,5 +2,5 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, minmax(100px, 1fr ));
-    gap: getGap(6);
+    gap: getGap(12);
 }

@@ -1,37 +1,31 @@
 .c-item {
     background-color: getColors("principal", 6);
-    border-radius: getBorderRadius(5);
+    @include border-radius(4);
 
     &__img {
-        height: 350px;
-        object-fit: cover;
-
-        background-image:
-            linear-gradient(to bottom, rgba(getColors("blanco", 1), 0), 75% , rgba(getColors("principal", 6), 1)),
-            url('../assets/img/dulce.jpg');
-
+        width: 100%;
+        height: 40vh;
         background-size: cover;
-        border-top-left-radius: getBorderRadius(5);
-        border-top-right-radius: getBorderRadius(5);
     }
 
     &__title {
-        font-size: getFontSize("3xl");
+        font-size: getFontSize("xl");
         font-weight: 600;
         font-family: getFontFamily("principal");
-        color: getColors("principal", 6);
 
-        padding: getPadding(5);
-        border-top-left-radius: getBorderRadius(5);
-        border-top-right-radius: getBorderRadius(5);
+        color: getColors("principal", 6);
         background-color: getColors("principal", 0);
+
+        padding-left: getPadding(5);
+        padding-right: getPadding(5);
+        padding-top: getPadding(8);
+        padding-bottom: getPadding(8);
+
+        @include border-top-left-radius(4);
+        @include border-top-right-radius(4);
     }
 
     &__footer {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-
         padding-left: getPadding(5);
         padding-right: getPadding(5);
 
@@ -41,9 +35,14 @@
         font-size: getFontSize("2xl");
         font-weight: 700;
         font-family: getFontFamily("alternativo");
+        
+        margin-top: getMargin(3);
+        margin-bottom: getMargin(3);
     }
 
     &__icon {
+        margin-top: getMargin(3);
+        margin-bottom: getMargin(3);
         &--right {
             margin-left: auto;
         }
