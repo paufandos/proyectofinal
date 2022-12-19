@@ -1,18 +1,20 @@
 .c-login {
   background-color: getColors("principal", 3);
-  padding: 20px;
+  padding: 5px;
   border-radius: 8px;
 
-
   &__form {
+    display: block;
     font-family: getFontFamily("principal");
     background-color: #9B7559;
     border-radius: 8px;
     border-color: 5px solid #825F4A;
-    margin: getMargin(5);
-    padding: getPadding(8);
     width: 350px;
-    height: 350px;
+    height: 100%;
+    margin: getMargin(3);
+    margin-left:getMargin(8);
+    margin-right:getMargin(8);
+    padding: getPadding(9);
     margin-bottom: getMargin(6);
   }
 
@@ -51,6 +53,7 @@
     text-decoration: none;
     color: getColors("alternativo", 4);
     margin-top: getPadding(8);
+    
   }
 
   &__link {
@@ -60,6 +63,6 @@
     font-weight: 500;
     color: getColors("principal", 7);
     font-size: getFontSize("xs");
-    margin-bottom: getMargin(3);
+    margin-bottom: getMargin(7);
   }
 }

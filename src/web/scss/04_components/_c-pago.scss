@@ -5,16 +5,20 @@
 
 
   &__form {
+    display: block;
     font-family: getFontFamily("principal");
     background-color: #9B7559;
     border-radius: 8px;
     border-color: 5px solid #825F4A;
-    margin: getMargin(5);
-    padding: getPadding(8);
     width: 500px;
-    height: 550px;
+    height:100%;
+    margin: getMargin(1);
+    margin-left:getMargin(7);
+    margin-right:getMargin(8);
+    padding: getPadding(9);
     margin-bottom: getMargin(6);
   }
+
 
   &__titulo {
     font-family: getFontFamily("principal");
@@ -54,6 +58,7 @@
     margin-top: getMargin(1);
     margin-bottom: getMargin(7);
     padding-left: getPadding(5);
+   
   }
 
   &__contenido {

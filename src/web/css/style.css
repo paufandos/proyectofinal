@@ -1154,12 +1154,12 @@ table {
 }
 .c-icon--alternativo-2 {
   color: #E3DBCE;
-  margin: 12px;
+  margin-top: 6px;
 }
 .c-icon--close {
   color: #823f44;
-  margin-right: 0px;
-  font-size: 30px;
+  margin-left: 16px;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -1215,18 +1215,21 @@ table {
 
 .c-login {
   background-color: #BAA187;
-  padding: 20px;
+  padding: 5px;
   border-radius: 8px;
 }
 .c-login__form {
+  display: block;
   font-family: Quicksand, sans-serif;
   background-color: #9B7559;
   border-radius: 8px;
   border-color: 5px solid #825F4A;
-  margin: 12px;
-  padding: 24px;
   width: 350px;
-  height: 350px;
+  height: 100%;
+  margin: 8px;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 32px;
   margin-bottom: 16px;
 }
 .c-login__presentation {
@@ -1269,7 +1272,7 @@ table {
   font-weight: 500;
   color: #F2EFE8;
   font-size: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 .c-main {
@@ -1328,14 +1331,17 @@ table {
   border-radius: 8px;
 }
 .c-pago__form {
+  display: block;
   font-family: Quicksand, sans-serif;
   background-color: #9B7559;
   border-radius: 8px;
   border-color: 5px solid #825F4A;
-  margin: 12px;
-  padding: 24px;
   width: 500px;
-  height: 550px;
+  height: 100%;
+  margin: 4px;
+  margin-left: 20px;
+  margin-right: 24px;
+  padding: 32px;
   margin-bottom: 16px;
 }
 .c-pago__titulo {

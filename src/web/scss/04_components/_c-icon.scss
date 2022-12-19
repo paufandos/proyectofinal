@@ -11,13 +11,13 @@
 
     &--alternativo-2 {
         color: getColors("principal", 6);
-        margin: getMargin(5);
+        margin-top: getMargin(2);
     }
 
     &--close {
         color: getColors("principal", 0);
-        margin-right: getMargin(0);
-        font-size: getFontSize("3xl");
+        margin-left: getMargin(6);
+        font-size: getFontSize("2xl");
         cursor: pointer;
     }
 
