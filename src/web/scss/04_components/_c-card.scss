@@ -1,18 +1,13 @@
 .c-card {
     @include border-radius(4);
 
-<<<<<<< HEAD
     &__nombre {
-=======
-    &__nombre{
->>>>>>> joseluis_11
         font-size: getFontSize("4xl");
         font-family: getFontFamily("principal");
         font-weight: bold;
         text-align: center;
 
         background-color: getColors("principal", 3);
-<<<<<<< HEAD
         color: getColors("blanco", 2);
 
         padding: getPadding(6);
@@ -20,31 +15,15 @@
         @include border-top-left-radius(4);
         @include border-top-right-radius(4);
         cursor: pointer;
-=======
-        color: getColors("blanco",2);
 
-        padding: getPadding(6);
-        
-        @include border-top-left-radius(4);
-        @include border-top-right-radius(4);
->>>>>>> joseluis_11
     }
 
     &__imagen {
         width: 100%;
         object-fit: cover;
-<<<<<<< HEAD
         
         @include border-bottom-left-radius(4);
         @include border-bottom-right-radius(4);
         cursor: pointer;
     }
 }
-=======
-        cursor: pointer;
-
-        @include border-bottom-left-radius(4);
-        @include border-bottom-right-radius(4);
-      }
-  }
->>>>>>> joseluis_11

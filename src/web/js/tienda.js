@@ -1,16 +1,10 @@
 window.onload = () => {
-<<<<<<< HEAD
-    document.getElementById("login_icon").onclick = () => mostrarModal("dialogLogin");
-    document.getElementById("cart_icon").onclick = () => mostrarModal("carrito");
-    addRefreshEvents();
-=======
     document.getElementById("login_icon").onclick = () => mostrarModal("login");
     document.getElementById("cart_icon").onclick = () => mostrarModal("carrito");
->>>>>>> joseluis_11
+    addRefreshEvents();
     pintarCategorias();
 };
 
-<<<<<<< HEAD
 function addRefreshEvents() {
     let refreshElements = document.getElementsByClassName("refresh");
     for (let element of refreshElements) {
@@ -20,23 +14,15 @@ function addRefreshEvents() {
     }
 }
 
-=======
->>>>>>> joseluis_11
 function pintarCategorias() {
     let main = document.getElementById("main");
     main.innerHTML = `<div id="categorias" class="l-columns-3"></div>`;
     let layout = document.getElementById("categorias");
     datos.forEach(cat => {
         layout.innerHTML += `<div id="cat-${cat.nombre}" class="c-card">
-<<<<<<< HEAD
                                 <div class="c-card__nombre">${cat.nombre.toUpperCase()}</div>
                                 <img src="./assets/img/${cat.nombre}.jpg" class="c-card__imagen" alt="${cat.nombre}" />
                             </div>`;
-=======
-                            <div class="c-card__nombre">${cat.nombre.toUpperCase()}</div>
-                            <img src="./assets/img/${cat.nombre}.jpg" class="c-card__imagen" alt="${cat.nombre}" />
-                        </div>`;
->>>>>>> joseluis_11
     });
 
     let cartas = layout.getElementsByClassName("c-card");
@@ -51,10 +37,7 @@ function mostrarModal(modal) {
 
 function pintarArticulos(id) {
     let main = document.getElementById("main");
-<<<<<<< HEAD
     main.classList = "c-main c-main--background-dark"
-=======
->>>>>>> joseluis_11
     main.innerHTML = `<div id="products" class="c-products"></div>`;
 
     let layout = document.getElementById("products");
@@ -78,14 +61,8 @@ function pintarArticulos(id) {
     });
 
     let images = layout.getElementsByClassName("c-item__img");
-<<<<<<< HEAD
     for (let img of images) {
         let rutaImg = "url('./assets/img/" + img.id + ".jpg')";
         img.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0),80%, rgb(227, 219, 206))," + rutaImg;
-=======
-    for (let img of images){
-        let rutaImg = "url('./assets/img/"+img.id+".jpg')";
-        img.style.backgroundImage = "linear-gradient(to bottom, rgb(255, 255, 255), 75% , rgb(214, 201, 184))," + rutaImg;
->>>>>>> joseluis_11
     }
 }

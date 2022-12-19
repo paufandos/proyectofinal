@@ -202,19 +202,12 @@ let datos = [
             },
             {
                 "id": "30",
-<<<<<<< HEAD
-                "nombre": "Hojaldre de carne",
-=======
                 "nombre": "Empanadilla de espinacas",
->>>>>>> joseluis_11
                 "descripcion": "",
                 "precio": 1.5
             },
             {
                 "id": "31",
-<<<<<<< HEAD
-                "nombre": "Tartaleta de queso",
-=======
                 "nombre": "Napolitanas jamón/queso",
                 "descripcion": "",
                 "precio": 1.5
@@ -222,7 +215,6 @@ let datos = [
             {
                 "id": "32",
                 "nombre": "Rosquilletas",
->>>>>>> joseluis_11
                 "descripcion": "",
                 "precio": 1.5
             }
@@ -269,24 +261,14 @@ let datos = [
                 "precio": 1
             },
             {
-<<<<<<< HEAD
-                "id": "36",
-                "nombre": "Bolsas de chuches grande",
-=======
                 "id": "39",
-                "nombre": "Bolsas de chuches",
->>>>>>> joseluis_11
+                "nombre": "Chuches grande",
                 "descripcion": "",
                 "precio": 1
             },
             {
-<<<<<<< HEAD
-                "id": "36",
-                "nombre": "Bolsas de chuches pequeña",
-=======
                 "id": "40",
-                "nombre": "Bolsas de chuches",
->>>>>>> joseluis_11
+                "nombre": "Chuches pequeña",
                 "descripcion": "",
                 "precio": 0.5
             }

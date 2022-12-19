@@ -4,14 +4,6 @@
     padding: getPadding(7);
     @include border-radius(4);
     
-<<<<<<< HEAD
-    &__title {
-        font-size: getFontSize("2xl");
-        color: getColors("principal",0);
-        font-weight: 600;
-    }
-
-=======
     &__titulo {
         font-family: getFontFamily("principal");
         color: getColors("principal", 6);
@@ -23,8 +15,6 @@
         margin:auto;
     }
 
-
->>>>>>> joseluis_11
     &__head {
         display: grid;
         grid-template-columns: 0.7fr 1.3fr 1.5fr 0.5fr 0.5fr 0.5fr 2fr;

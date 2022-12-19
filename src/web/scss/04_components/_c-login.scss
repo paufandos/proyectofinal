@@ -1,9 +1,5 @@
 .c-login {
-<<<<<<< HEAD
-  background-color: #BAA187;
-=======
   background-color: getColors("principal", 3);
->>>>>>> joseluis_11
   padding: 20px;
   border-radius: 8px;
 
@@ -16,11 +12,7 @@
     margin: getMargin(5);
     padding: getPadding(8);
     width: 350px;
-<<<<<<< HEAD
-    height: 300px;
-=======
     height: 350px;
->>>>>>> joseluis_11
     margin-bottom: getMargin(6);
   }
 
@@ -28,11 +20,7 @@
     font-family: getFontFamily("principal");
     color: getColors("principal", 0);
     font-weight: bold;
-<<<<<<< HEAD
-    font-size: getFontSize("2xl");
-=======
     font-size: getFontSize("3xl");
->>>>>>> joseluis_11
     text-align: center;
   }
 
@@ -40,11 +28,7 @@
     font-weight: bold;
     font-size: getFontSize("s");
     text-align: left;
-<<<<<<< HEAD
-    color: getColors("blanco", 5);
-=======
     color: getColors("principal", 6);
->>>>>>> joseluis_11
     margin-top: getMargin(4);
     margin-bottom: getMargin(9);
     padding-bottom: getPadding(5);
@@ -74,11 +58,7 @@
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-<<<<<<< HEAD
-    color: getColors("blanco", 1);
-=======
     color: getColors("principal", 7);
->>>>>>> joseluis_11
     font-size: getFontSize("xs");
     margin-bottom: getMargin(3);
   }

@@ -7,12 +7,5 @@
     background-color: getColors("principal", 5);
 
     padding: getPadding(10);
-<<<<<<< HEAD
     @include border-radius(4);
-=======
-
-    @include border-radius(4);
-
-    background-color: getColors("principal", 5);
->>>>>>> joseluis_11
 }

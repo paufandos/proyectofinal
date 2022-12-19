@@ -2,20 +2,13 @@
 <html lang="es">
 
 <head>
-<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Grupo A">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
-  </style>
-=======
 
+  <link rel="icon" type="image/x-icon" href="./assets/img/logo-04.jpg">
   <link rel="stylesheet" href="css/style.css">
->>>>>>> 5bae594 (feat(#13):Css refactorizado, JS completado, mergeado)
 
   <script src="https://kit.fontawesome.com/16ac316f21.js" crossorigin="anonymous"></script>
   <script src="./js/datos.js"></script>
@@ -34,6 +27,11 @@
         <img class="c-nav__img refresh" src="./assets/img/EducaCafe-3.png" alt="educafe_title">
       </div>
       <div class="c-nav__item">
+        <i id="registro_icon" class="c-icon fa-solid fa-registered" onclick="window.registro.showModal()"></i>
+        <!-- provisional FORMULARIO DE REGISTRO-->
+        <i id="pago_icon" class="c-icon fa-solid fa-dollar-sign" onclick="window.pago.showModal()"></i>
+        <!-- provisional FORMA DE PAGO-->
+        <i class="c-icon fa-solid fa-rectangle-list" onclick="window.historialCarrito.showModal()"></i>
         <i id="login_icon" class="c-icon fa-solid fa-user"></i>
         <i id="cart_icon" class="c-icon fa-solid fa-cart-shopping"></i>
       </div>
@@ -44,8 +42,8 @@
 
   <footer class="c-footer">
     <div class="l-flex l-flex--justify-content-center l-flex--align-items-center">
-      <a class="c-footer__item" href="">Terminos</a>
-      <a class="c-footer__item" href="">Politica de privacidad</a>
+      <a class="c-footer__item" href="">Términos</a>
+      <a class="c-footer__item" href="">Política de privacidad</a>
       <a class="c-footer__item" href="">Contacto</a>
     </div>
     <div class="c-footer__item c-footer__item--blanco">Pavela Enterprise &copy; 2022-2023</div>
@@ -53,9 +51,12 @@
 </body>
 
 <!-- Componente HTML para dialogos modal FORMULARIO LOGIN -->
-<dialog id="dialogLogin" class="c-modal">
+<dialog id="login" class="c-modal">
   <div class="c-login l-flex l-flex--justify-content-center l-flex--align-items-center">
     <form class="c-login__form">
+      <div class="c-pago__titulo">
+        <label for="titulo">Inicio de sesión</label>
+      </div>
       <label class="c-login__label" for="usuario">Usuario</label>
       <input id="usuario" class="c-login__input" name="usuario" type="text"
         placeholder="Escribe aquí tu nombre de usuario">
@@ -75,345 +76,241 @@
         <img src="./assets/img/eduCafe-02.png" style="width: 300px;" alt="educafe_logo">
       </div>
       <div>
-        <a class="c-login__link" href="#">¿No tienes cuenta? Regístrate</a>
-        <button class="c-button">Regístrarse</button>&nbsp;&nbsp;&nbsp;
-        <button class="c-button c-button--alternativo">Cerrar</button>
+        <a class="c-login__link" onclick="window.registro.showModal()" href="#">¿No tienes cuenta? Regístrate</a>
+        <button class="c-button" onclick="window.registro.showModal()">Regístrarse</button>&nbsp;&nbsp;&nbsp;
+        <button class="c-button c-button--alternativo" onclick="window.login.close()">Cancelar</button>
       </div>
-=======
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Grupo A">
-    <link rel="icon" type="image/x-icon" href="./assets/img/logo-04.jpg">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
-    </style>
-
-    <script src="https://kit.fontawesome.com/16ac316f21.js" crossorigin="anonymous"></script>
-    <script src="./js/datos.js"></script>
-    <script src="./js/tienda.js"></script>
-    <title>EduCafé</title>
-</head>
-
-<body>
-    <header>
-        <nav class="c-nav l-flex l-flex l-flex--align-items-center">
-            <div class="c-nav__item">
-                <img class="c-nav__logo" src="./assets/img/logo-01.png" alt="educafe_logo" onclick="inicio()">
-            </div>
-            <div class="c-nav__item  c-nav__item--center">
-                <img class="c-nav__title " src="./assets/img/EducaCafe-3.png" alt="educafe_title">
-            </div>
-            <div class="c-nav__item">
-                <i id="registro_icon" class="c-icon fa-solid fa-registered" onclick="window.registro.showModal()"></i> <!-- provisional FORMULARIO DE REGISTRO-->
-                <i id="pago_icon" class="c-icon fa-solid fa-dollar-sign" onclick="window.pago.showModal()"></i> <!-- provisional FORMA DE PAGO-->
-                <i id="login_icon" class="c-icon fa-solid fa-user"></i>
-                <i id="cart_icon" class="c-icon fa-solid fa-cart-shopping"></i>
-                <i class="c-icon fa-solid fa-rectangle-list" onclick="window.historialCarrito.showModal()"></i>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main" class="c-main">
-
-    </main>
-
-    <footer class="c-footer">
-        <div class="l-flex l-flex--justify-content-center l-flex--align-items-center">
-            <a class="c-footer__item" href="">Términos</a>
-            <a class="c-footer__item" href="">Política de privacidad</a>
-            <a class="c-footer__item" href="">Contacto</a>
-        </div>
-        <div class="c-footer__item c-footer__item--blanco">Pavela Enterprise &copy; 2022-2023</div>
-    </footer>
-</body>
-
-<!-- Componente HTML para dialogos modal FORMULARIO LOGIN -->
-<dialog id="login" class="c-modal">
-    <div class="c-login l-flex l-flex--justify-content-center l-flex--align-items-center">
-        <form class="c-login__form">
-            <div class="c-pago__titulo">
-                <label  for="titulo">Inicio de sesión</label>
-            </div>
-            <label class="c-login__label" for="usuario">Usuario</label>
-            <input id="usuario" class="c-login__input" name="usuario" type="text" placeholder="Escribe aquí tu nombre de usuario">
-
-            <label class="c-login__label" for="password">Contraseña</label>
-            <input id="password" class="c-login__input" name="password" type="password" placeholder="Escribe aquí tu contraseña" >
-
-            <div class="c-login__contenido">
-                <button class="c-button" type="submit" title="Ingresar" name="Ingresar">Inicia sesión</button><br><br>
-                <a class="c-login__link" href="#">¿Has olvidado tu contraseña?</a>
-            </div>
-        </form>
-        <div class="c-login__presentation">
-            <div>Bienvenido a</div>
-            <div>
-                <img src="./assets/img/eduCafe-02.png" style="width: 300px;" alt="educafe_logo">
-            </div>
-            <div>
-                <a class="c-login__link" onclick="window.registro.showModal()" href="#">¿No tienes cuenta? Regístrate</a>
-                <button class="c-button" onclick="window.registro.showModal()">Regístrarse</button>&nbsp;&nbsp;&nbsp;
-                <button class="c-button c-button--alternativo" onclick="window.login.close()">Cancelar</button>
-            </div>
-        </div>
->>>>>>> joseluis_11
     </div>
+  </div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal DETALLE PRODUCTO -->
-<<<<<<< HEAD
 <dialog id="detalleProducto"></dialog>
 
-  <!-- Componente HTML para dialogos modal CARRITO -->
-  <dialog id="carrito">
-=======
-<dialog id="detalleProducto">
-
-
-</dialog>
->>>>>>> joseluis_11
-
-
 <!-- Componente HTML para dialogos modal CARRITO -->
-    <dialog id="carrito" class="c-modal">
-        <div class="c-cart">
-        <div class="c-cart__titulo">Carrito 247</div>
-        <div class="c-cart__head">
-            <div></div>
-            <div>Nombre</div>
-            <div>Descripción</div>
-            <div>Precio</div>
-            <div>Unidades</div>
-            <div>Total</div>
-            <div></div>
-        </div>
-        <div class="c-cart__row">
-            <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-            <div>Lomo Papas</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-            <div>2,5€</div>
-            <div>2</div>
-            <div>5€</div>
-            <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
-        </div>
-        <div class="c-cart__row">
-            <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-            <div>Bocadillo pequeño</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-            <div>2€</div>
-            <div>1</div>
-            <div>2€</div>
-            <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
-        </div>
-        <div class="c-cart__row">
-            <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-            <div>Paninis</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-            <div>1,2€</div>
-            <div>3</div>
-            <div>3,60€</div>
-        <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#" class="c-cart__delete-row">Eliminar</a></div>
-        <div class="c-cart__price">Total: 10,60€</div>
-        <div class="c-cart__footer">
-            <a href="#" class="c-button">Confirmar carrito</a>
-            <a href="#" class="c-button c-button--alternativo" onclick="window.carrito.close()">Seguir comprando</a>
-        </div>
-    </dialog>
-
-  <!-- Componente HTML para dialogos modal HISTORIAL CARRITO -->
-  <dialog id="historialCarrito" class="c-modal">
-    <div class="c-title">Listado carritos</div>
-    <div class="c-cart c-cart--list-item">
-      <div class="l-flex l-flex--justify-content-space-between">
-<<<<<<< HEAD
-        <div class="c-cart__title">Carrito 247</div>
-=======
-        <div class="c-cart__titulo">Carrito 247</div>
->>>>>>> joseluis_11
-        <div class="c-cart__label c-cart__label--unpaid">PENDIENTE DE PAGO</div>
-      </div>
-      <div class="c-cart__head">
-        <div></div>
-        <div>Nombre</div>
-        <div>Descripción</div>
-        <div>Precio</div>
-        <div>Unidades</div>
-        <div>Total</div>
-        <div></div>
-      </div>
-      <div class="c-cart__row">
-        <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-        <div>Lomo Papas</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div>2,5€</div>
-        <div>2</div>
-        <div>5€</div>
-        <div></div>
-      </div>
-      <div class="c-cart__row">
-        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-        <div>Bocadillo pequeño</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div>2€</div>
-        <div>1</div>
-        <div>2€</div>
-        <div></div>
-      </div>
-      <div class="c-cart__row">
-        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-        <div>Paninis</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div>1,2€</div>
-        <div>3</div>
-        <div>3,60€</div>
-        <div></div>
-      </div>
-      <div class="c-cart__price">Total: 10,60€</div>
-<<<<<<< HEAD
-=======
-      
+<dialog id="carrito" class="c-modal">
+  <div class="c-cart">
+    <div class="c-cart__titulo">Carrito 247</div>
+    <div class="c-cart__head">
       <div></div>
->>>>>>> joseluis_11
+      <div>Nombre</div>
+      <div>Descripción</div>
+      <div>Precio</div>
+      <div>Unidades</div>
+      <div>Total</div>
+      <div></div>
+    </div>
+    <div class="c-cart__row">
+      <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Lomo Papas</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>2,5€</div>
+      <div>2</div>
+      <div>5€</div>
+      <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#"
+          class="c-cart__delete-row">Eliminar</a></div>
+    </div>
+    <div class="c-cart__row">
+      <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Bocadillo pequeño</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>2€</div>
+      <div>1</div>
+      <div>2€</div>
+      <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#"
+          class="c-cart__delete-row">Eliminar</a></div>
+    </div>
+    <div class="c-cart__row">
+      <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Paninis</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>1,2€</div>
+      <div>3</div>
+      <div>3,60€</div>
+      <div><a href="#" class="c-button">+</a> <a href="#" class="c-button">-</a> <a href="#"
+          class="c-cart__delete-row">Eliminar</a></div>
+      <div class="c-cart__price">Total: 10,60€</div>
       <div class="c-cart__footer">
-        <a href="#" class="c-button">Pagar</a>
-        <a href="#" class="c-button c-button--alternativo">Recuperar</a>
-        <a href="#" class="c-button c-button--warning">Borrar</a>
+        <a href="#" class="c-button">Confirmar carrito</a>
+        <a href="#" class="c-button c-button--alternativo" onclick="window.carrito.close()">Seguir comprando</a>
       </div>
-    </div>
-
-    <div class="c-cart c-cart--list-item">
-      <div class="l-flex l-flex--justify-content-space-between">
-        <div class="c-cart__title">Carrito 246</div>
-        <div class="c-cart__label c-cart__label--paid">PAGADO</div>
-      </div>
-      <div class="c-cart__head">
-        <div></div>
-        <div>Nombre</div>
-        <div>Descripción</div>
-        <div>Precio</div>
-        <div>Unidades</div>
-        <div>Total</div>
-        <div></div>
-      </div>
-      <div class="c-cart__row">
-        <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-        <div>Lomo Papas</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div>2,5€</div>
-        <div>1</div>
-        <div>2,5€</div>
-        <div></div>
-      </div>
-      <div class="c-cart__row">
-        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-        <div>Bocadillo pequeño</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div>2€</div>
-        <div>2</div>
-        <div>4€</div>
-        <div></div>
-      </div>
-      <div class="c-cart__row">
-        <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
-        <div>Paninis</div>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <div>1,2€</div>
-        <div>1</div>
-        <div>1,2€</div>
-        <div></div>
-      </div>
-      <div class="c-cart__price">Total: 7,7€</div>
-    </div>
-<<<<<<< HEAD
-    <div class="g--text-align-center">
-      <a href="#" class="c-button" onclick="window.historialCarrito.close()">Cerrar</a>
-    </div>
-  </dialog>
-
-<!-- Componente HTML para dialogos modal FORMULARIO DE PAGO -->
-<dialog id="pago" class="c-modal"></dialog>
-=======
-    <div class="c-cart l-flex l-flex--justify-content-center l-flex--align-items-center">
-        <a href="#" class="c-button" onclick="window.historialCarrito.close()">Cerrar</a>
-
-    </div>
-  </dialog>
-
+</dialog>
 
 <!-- Componente HTML para dialogos modal HISTORIAL CARRITO -->
-<dialog id="historialCarrito">
+<dialog id="historialCarrito" class="c-modal">
+  <div class="c-title">Listado carritos</div>
+  <div class="c-cart c-cart--list-item">
+    <div class="l-flex l-flex--justify-content-space-between">
+      <div class="c-cart__titulo">Carrito 247</div>
+      <div class="c-cart__label c-cart__label--unpaid">PENDIENTE DE PAGO</div>
+    </div>
+    <div class="c-cart__head">
+      <div></div>
+      <div>Nombre</div>
+      <div>Descripción</div>
+      <div>Precio</div>
+      <div>Unidades</div>
+      <div>Total</div>
+      <div></div>
+    </div>
+    <div class="c-cart__row">
+      <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Lomo Papas</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>2,5€</div>
+      <div>2</div>
+      <div>5€</div>
+      <div></div>
+    </div>
+    <div class="c-cart__row">
+      <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Bocadillo pequeño</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>2€</div>
+      <div>1</div>
+      <div>2€</div>
+      <div></div>
+    </div>
+    <div class="c-cart__row">
+      <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Paninis</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>1,2€</div>
+      <div>3</div>
+      <div>3,60€</div>
+      <div></div>
+    </div>
+    <div class="c-cart__price">Total: 10,60€</div>
+    <div class="c-cart__footer">
+      <a href="#" class="c-button">Pagar</a>
+      <a href="#" class="c-button c-button--alternativo">Recuperar</a>
+      <a href="#" class="c-button c-button--warning">Borrar</a>
+    </div>
+  </div>
 
+  <div class="c-cart c-cart--list-item">
+    <div class="l-flex l-flex--justify-content-space-between">
+      <div class="c-cart__title">Carrito 246</div>
+      <div class="c-cart__label c-cart__label--paid">PAGADO</div>
+    </div>
+    <div class="c-cart__head">
+      <div></div>
+      <div>Nombre</div>
+      <div>Descripción</div>
+      <div>Precio</div>
+      <div>Unidades</div>
+      <div>Total</div>
+      <div></div>
+    </div>
+    <div class="c-cart__row">
+      <div><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Lomo Papas</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>2,5€</div>
+      <div>1</div>
+      <div>2,5€</div>
+      <div></div>
+    </div>
+    <div class="c-cart__row">
+      <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Bocadillo pequeño</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>2€</div>
+      <div>2</div>
+      <div>4€</div>
+      <div></div>
+    </div>
+    <div class="c-cart__row">
+      <div class="c-cart__img"><img src="./assets/img/bocadillos.jpg" class="c-cart__img"></div>
+      <div>Paninis</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div>1,2€</div>
+      <div>1</div>
+      <div>1,2€</div>
+      <div></div>
+    </div>
+    <div class="c-cart__price">Total: 7,7€</div>
+  </div>
+  <div class="g--text-align-center">
+    <a href="#" class="c-button" onclick="window.historialCarrito.close()">Cerrar</a>
+  </div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE PAGO -->
 <dialog id="pago" class="c-modal">
-    <div class="c-pago l-flex l-flex--justify-content-center l-flex--align-items-center">
-        <form class="c-pago__form">
-            <div class="c-pago__titulo" >
-                <label for="titulo">Formulario de pago</label>
-            </div>
+  <div class="c-pago l-flex l-flex--justify-content-center l-flex--align-items-center">
+    <form class="c-pago__form">
+      <div class="c-pago__titulo">
+        <label for="titulo">Formulario de pago</label>
+      </div>
 
-            <label class="c-pago__label" for="usuario">Nombre de la Tarjeta</label>
-            <input class="c-pago__input" id="nombreTarjeta" type="text" size="45" name="nombreTarjeta" placeholder="Tal y como aparece en la tarjeta">
-            <label class="c-pago__label" for="numeroTarjeta">Número de la Tarjeta</label>
-            <input class="c-pago__input" id="numeroTarjeta" type="password" size="45" name="numeroTarjeta" placeholder="Números sin separaciones" >
+      <label class="c-pago__label" for="usuario">Nombre de la Tarjeta</label>
+      <input class="c-pago__input" id="nombreTarjeta" type="text" size="45" name="nombreTarjeta"
+        placeholder="Tal y como aparece en la tarjeta">
+      <label class="c-pago__label" for="numeroTarjeta">Número de la Tarjeta</label>
+      <input class="c-pago__input" id="numeroTarjeta" type="password" size="45" name="numeroTarjeta"
+        placeholder="Números sin separaciones">
 
-            <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-space-between">
-                <label class="c-pago__label" for="fecha">Fecha de expiración de la Tarjeta</label>
-                <label class="c-pago__label" for="codigoSeguridad">Código de seguridad</label>
-            </div>
+      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-space-between">
+        <label class="c-pago__label" for="fecha">Fecha de expiración de la Tarjeta</label>
+        <label class="c-pago__label" for="codigoSeguridad">Código de seguridad</label>
+      </div>
 
-            <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
-                <input class="c-pago__input" id="mesTarjeta" type="text" maxlength="2" size="4"  name="mesTarjeta" placeholder="MM">
-                <input class="c-pago__input" id="anyoTarjeta" type="text"  maxlength="2" size="4" name="anyoTarjeta" placeholder="YY">
-                <input class="c-pago__input" id="codigoSeguridad" type="text" maxlength="3" size="6" name="codigoSeguridad" placeholder="3 dígitos">
-            </div>
-            <label class="c-pago__label" for="formasPago">Formas de pago válidas:</label>
-            <div class="c-icon--alternativo">
-                <i class="fa-brands fa-cc-visa fa-3x"></i>
-                <i class="fa-brands fa-cc-mastercard fa-3x"></i>
-                <i class="fa-brands fa-cc-paypal fa-3x"></i>
-                <i class="fa-brands fa-cc-apple-pay fa-3x"></i>
-                <i class="fa-brands fa-cc-amazon-pay fa-3x"></i>
-            </div>
-            <div class="c-pago__presentation">
-                <button class="c-button">Confirmar pago</button>&nbsp;&nbsp;&nbsp;
-                <button class="c-button c-button--alternativo" onclick="window.pago.close()">Cerrar</button>
-            </div>
-        </form>
-    </div>
+      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
+        <input class="c-pago__input" id="mesTarjeta" type="text" maxlength="2" size="4" name="mesTarjeta"
+          placeholder="MM">
+        <input class="c-pago__input" id="anyoTarjeta" type="text" maxlength="2" size="4" name="anyoTarjeta"
+          placeholder="YY">
+        <input class="c-pago__input" id="codigoSeguridad" type="text" maxlength="3" size="6" name="codigoSeguridad"
+          placeholder="3 dígitos">
+      </div>
+      <label class="c-pago__label" for="formasPago">Formas de pago válidas:</label>
+      <div class="c-icon--alternativo">
+        <i class="fa-brands fa-cc-visa fa-3x"></i>
+        <i class="fa-brands fa-cc-mastercard fa-3x"></i>
+        <i class="fa-brands fa-cc-paypal fa-3x"></i>
+        <i class="fa-brands fa-cc-apple-pay fa-3x"></i>
+        <i class="fa-brands fa-cc-amazon-pay fa-3x"></i>
+      </div>
+      <div class="c-pago__presentation">
+        <button class="c-button">Confirmar pago</button>&nbsp;&nbsp;&nbsp;
+        <button class="c-button c-button--alternativo" onclick="window.pago.close()">Cerrar</button>
+      </div>
+    </form>
+  </div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE REGISTRO -->
 <dialog id="registro" class="c-modal">
-    <div class="c-registro l-flex l-flex--justify-content-center l-flex--align-items-center">
-        <form class="c-registro__form">
-            <div class="c-registro__titulo">
-                <label  for="titulo">Formulario de registro</label>
-            </div>
-            <label class="c-registro__label" for="nombre">Nombre</label>
-            <input class="c-registro__input" id="nombreRegistro" type="text" size="30" name="nombreRegistro" placeholder="">
-            <label class="c-registro__label" for="apellido1">Primer apellido</label>
-            <input class="c-registro__input" id="apellido1Registro" type="text" size="30" name="apellido1Registro" placeholder="">
-            <label class="c-registro__label" for="apellido2">Segundo apellido</label>
-            <input class="c-registro__input" id="apellido2Registro" type="text" size="30" name="apellido2Registro" placeholder="">
-            <label class="c-registro__label" for="correoRegistro">Correo electrónico</label>
-            <input class="c-registro__input" id="apellido1Registro" type="text" size="40" name="correoRegistro" placeholder="">
-            <label class="c-registro__label" for="passwordRegistro">Contraseña</label>
-            <input class="c-registro__input" id="passwordRegistro" type="password" size="40" name="passwordRegistro" placeholder="">
-            <label class="c-registro__label" for="confirmarPasswordRegistro">Confirmar contraseña</label>
-            <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" size="40" name="confirmarPasswordRegistro" placeholder="">
+  <div class="c-registro l-flex l-flex--justify-content-center l-flex--align-items-center">
+    <form class="c-registro__form">
+      <div class="c-registro__titulo">
+        <label for="titulo">Formulario de registro</label>
+      </div>
+      <label class="c-registro__label" for="nombre">Nombre</label>
+      <input class="c-registro__input" id="nombreRegistro" type="text" size="30" name="nombreRegistro" placeholder="">
+      <label class="c-registro__label" for="apellido1">Primer apellido</label>
+      <input class="c-registro__input" id="apellido1Registro" type="text" size="30" name="apellido1Registro"
+        placeholder="">
+      <label class="c-registro__label" for="apellido2">Segundo apellido</label>
+      <input class="c-registro__input" id="apellido2Registro" type="text" size="30" name="apellido2Registro"
+        placeholder="">
+      <label class="c-registro__label" for="correoRegistro">Correo electrónico</label>
+      <input class="c-registro__input" id="apellido1Registro" type="text" size="40" name="correoRegistro"
+        placeholder="">
+      <label class="c-registro__label" for="passwordRegistro">Contraseña</label>
+      <input class="c-registro__input" id="passwordRegistro" type="password" size="40" name="passwordRegistro"
+        placeholder="">
+      <label class="c-registro__label" for="confirmarPasswordRegistro">Confirmar contraseña</label>
+      <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" size="40"
+        name="confirmarPasswordRegistro" placeholder="">
 
-            <div class="c-registro__presentation">
-                <button class="c-button">Confirmar registro</button>&nbsp;&nbsp;&nbsp;
-                <button class="c-button c-button--alternativo" onclick="window.registro.close()">Cancelar</button>
-            </div>
-        </form>
-    </div>
+      <div class="c-registro__presentation">
+        <button class="c-button">Confirmar registro</button>&nbsp;&nbsp;&nbsp;
+        <button class="c-button c-button--alternativo" onclick="window.registro.close()">Cancelar</button>
+      </div>
+    </form>
+  </div>
 </dialog>
->>>>>>> joseluis_11
 
 </html>
