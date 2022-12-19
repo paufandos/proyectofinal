@@ -80,12 +80,31 @@
         <button class="c-button" onclick="window.registro.showModal()">Regístrarse</button>&nbsp;&nbsp;&nbsp;
         <button class="c-button c-button--alternativo" onclick="window.login.close()">Cancelar</button>
       </div>
+
     </div>
-  </div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal DETALLE PRODUCTO -->
-<dialog id="detalleProducto"></dialog>
+<dialog class="c-modal" id="detalleproducto">
+  <div class="c-modal__content l-flex l-flex--direction-column"> 
+      <div class="c-modal__content__icon l-flex--align-self-end">
+          <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.detalleproducto.close()"></i>
+      </div> 
+        
+      <div class="c-product l-flex l-flex--direction-row l-flex--wrap l-columns l-flex--align-items-center">  
+        <img src="assets/img/croissants.png" class="c-product__img">
+        <div class="c-product__informacion l-flex l-flex--direction-column l-flex--justify-items-center">
+            <div class=" c-product__informacion__titulo">Croissant</div>  
+            <div class=" c-product__informacion__descripcion">Desde París con amor. Un clásico de nuestro aparador. Elaborado con largos reposos, ingredientes naturales y mantequilla de la máxima calidad.</div>              
+            <div class=" l-flex l-flex--direction-row l-flex--justify-content-center">
+              <div class="c-product__informacion__precio">0.50€</div>&nbsp;&nbsp;&nbsp;
+              <button class ="c-button"><i class="fa-solid fa-cart-plus"></i> Comprar</button>
+            </div>                
+        </div>                     
+      </div>   
+  </div>
+</dialog>
+
 
 <!-- Componente HTML para dialogos modal CARRITO -->
 <dialog id="carrito" class="c-modal">

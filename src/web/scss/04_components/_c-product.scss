@@ -1,0 +1,53 @@
+.c-product{
+    border-radius: getBorderRadius(4);
+    background-color: getColors("principal",3);
+    font-family: getFontFamily("principal");
+    padding:getPadding(5);
+    
+&__img {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: getBorderRadius(4);
+    object-fit: cover;
+}
+
+&__informacion{
+    text-align: center; 
+    background-color: #9B7559;
+    border:5px solid ;
+    border-color: #825F4A;
+    margin: getMargin(5);
+    padding:getPadding(5);
+   
+    color: getColors("blanco",3);
+    box-sizing: border-box;
+    
+
+    border-radius: getBorderRadius(4);
+    object-fit: cover;
+ 
+    &__titulo{
+        font-size: getFontSize("3xl");
+        padding:getPadding(5);
+        border:none;
+    }
+
+    &__descripcion{
+        padding:getPadding(5);
+        border:none;
+    }
+    &__precio{
+        font-size: getFontSize("xl");
+        font-weight: 700;
+        font-family: getFontFamily("alternativo");
+        padding:getPadding(5);
+       
+    }
+ 
+
+    
+}
+
+
+
+}

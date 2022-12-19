@@ -50,11 +50,11 @@ function pintarArticulos(id) {
                                 <div id="producto_${p.id}" class="c-item__img"></div>
                                 <div class="c-item__footer l-flex l-flex--align-items-center">
                                     <div class="c-item__icon c-item__icon--left">
-                                        <i class="c-icon fa-solid fa-circle-info"></i>
+                                        <i class="c-icon fa-solid fa-circle-info" onclick="window.detalleproducto.showModal()"></i>
                                     </div>
                                     <div class="c-item__price">${p.precio.toFixed(2)} €</div>
                                     <div class="c-item__icon c-item__icon--right">
-                                        <i class="c-icon c-icon--alternativo fa-solid fa-cart-plus"></i>
+                                        <i class="c-icon c-icon--alternativo fa-solid fa-cart-plus" ></i>
                                     </div>
                                 </div>
                             </div>`;
