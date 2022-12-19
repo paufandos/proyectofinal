@@ -6,5 +6,19 @@
 
     &--alternativo {
         color: getColors("alternativo", 5);
+        margin: getMargin(5);
     }
+
+    &--alternativo-2 {
+        color: getColors("principal", 6);
+        margin: getMargin(5);
+    }
+
+    &--close {
+        color: getColors("principal", 0);
+        margin-right: getMargin(0);
+        font-size: getFontSize("3xl");
+        cursor: pointer;
+    }
+
 }

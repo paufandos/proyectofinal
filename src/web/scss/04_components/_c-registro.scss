@@ -5,14 +5,17 @@
 
 
   &__form {
+    display: block;
     font-family: getFontFamily("principal");
     background-color: #9B7559;
     border-radius: 8px;
     border-color: 5px solid #825F4A;
-    margin: getMargin(5);
-    padding: getPadding(8);
-    width: 400px;
-    height: 650px;
+    width: 550px;
+    height: 100%;
+    margin: getMargin(3);
+    margin-left:getMargin(8);
+    margin-right:getMargin(8);
+    padding: getPadding(9);
     margin-bottom: getMargin(6);
   }
 
@@ -22,7 +25,7 @@
     font-weight: bold;
     font-size: getFontSize("3xl");
     text-align: center;
-    padding-top: getPadding(4);
+    padding-top: getPadding(2);
     padding-bottom: getPadding(8);
     margin:auto;
   }
@@ -41,9 +44,9 @@
     font-size: getFontSize("s");
     text-align: left;
     color: getColors("principal", 6);
-    margin-top: getMargin(6);
     margin-bottom: getMargin(1);
-    padding-bottom: getPadding(5);
+    margin-top: getMargin(1);
+
   }
 
   &__input {
@@ -52,8 +55,8 @@
     display: block;
     height: 35px;
     margin-top: getMargin(1);
-    margin-bottom: getMargin(7);
-    padding-left: getPadding(5);
+    margin-bottom: getMargin(6);
+    padding-left: getPadding(6);
   }
 
   &__contenido {
@@ -61,6 +64,6 @@
     text-align: center;
     text-decoration: none;
     color: getColors("alternativo", 4);
-    margin-top: getMargin(8);
+    margin-top: getMargin(6);
   }
 }

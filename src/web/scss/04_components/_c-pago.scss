@@ -22,11 +22,11 @@
     font-weight: bold;
     font-size: getFontSize("3xl");
     text-align: center;
-    padding-top: getPadding(6);
+    padding-top: getPadding(2);
     padding-bottom: getPadding(8);
     margin:auto;
   }
-
+  
   &__presentation {
     font-family: getFontFamily("principal");
     color: getColors("principal", 0);

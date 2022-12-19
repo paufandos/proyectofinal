@@ -1150,6 +1150,17 @@ table {
 }
 .c-icon--alternativo {
   color: #80B79A;
+  margin: 12px;
+}
+.c-icon--alternativo-2 {
+  color: #E3DBCE;
+  margin: 12px;
+}
+.c-icon--close {
+  color: #823f44;
+  margin-right: 0px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .c-item {
@@ -1333,7 +1344,7 @@ table {
   font-weight: bold;
   font-size: 30px;
   text-align: center;
-  padding-top: 16px;
+  padding-top: 6px;
   padding-bottom: 24px;
   margin: auto;
 }
@@ -1429,14 +1440,17 @@ table {
   border-radius: 8px;
 }
 .c-registro__form {
+  display: block;
   font-family: Quicksand, sans-serif;
   background-color: #9B7559;
   border-radius: 8px;
   border-color: 5px solid #825F4A;
-  margin: 12px;
-  padding: 24px;
-  width: 400px;
-  height: 650px;
+  width: 550px;
+  height: 100%;
+  margin: 8px;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding: 32px;
   margin-bottom: 16px;
 }
 .c-registro__titulo {
@@ -1445,7 +1459,7 @@ table {
   font-weight: bold;
   font-size: 30px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 6px;
   padding-bottom: 24px;
   margin: auto;
 }
@@ -1462,9 +1476,8 @@ table {
   font-size: 14px;
   text-align: left;
   color: #E3DBCE;
-  margin-top: 16px;
   margin-bottom: 4px;
-  padding-bottom: 12px;
+  margin-top: 4px;
 }
 .c-registro__input {
   font-size: 14px;
@@ -1472,15 +1485,15 @@ table {
   display: block;
   height: 35px;
   margin-top: 4px;
-  margin-bottom: 20px;
-  padding-left: 12px;
+  margin-bottom: 16px;
+  padding-left: 16px;
 }
 .c-registro__contenido {
   display: block;
   text-align: center;
   text-decoration: none;
   color: #619E7A;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .c-title {

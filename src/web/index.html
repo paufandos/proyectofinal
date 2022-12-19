@@ -89,19 +89,19 @@
   <div class="c-modal__content l-flex l-flex--direction-column"> 
       <div class="c-modal__content__icon l-flex--align-self-end">
           <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.detalleproducto.close()"></i>
-      </div> 
-        
-      <div class="c-product l-flex l-flex--direction-row l-flex--wrap l-columns l-flex--align-items-center">  
+      </div>
+
+      <div class="c-product l-flex l-flex--direction-row l-flex--wrap l-columns l-flex--align-items-center">
         <img src="assets/img/croissants.png" class="c-product__img">
         <div class="c-product__informacion l-flex l-flex--direction-column l-flex--justify-items-center">
-            <div class=" c-product__informacion__titulo">Croissant</div>  
+            <div class=" c-product__informacion__titulo">Croissant</div>
             <div class=" c-product__informacion__descripcion">Desde París con amor. Un clásico de nuestro aparador. Elaborado con largos reposos, ingredientes naturales y mantequilla de la máxima calidad.</div>              
             <div class=" l-flex l-flex--direction-row l-flex--justify-content-center">
               <div class="c-product__informacion__precio">0.50€</div>&nbsp;&nbsp;&nbsp;
               <button class ="c-button"><i class="fa-solid fa-cart-plus"></i> Comprar</button>
-            </div>                
-        </div>                     
-      </div>   
+            </div>
+        </div>
+      </div>
   </div>
 </dialog>
 
@@ -276,15 +276,17 @@
       </div>
 
       <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
-        <input class="c-pago__input" id="mesTarjeta" type="text" maxlength="2" size="4" name="mesTarjeta"
-          placeholder="MM">
+        <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
+          <input class="c-pago__input" id="mesTarjeta" type="text" maxlength="2" size="4" name="mesTarjeta"
+          placeholder="MM">&nbsp;&nbsp;&nbsp;
         <input class="c-pago__input" id="anyoTarjeta" type="text" maxlength="2" size="4" name="anyoTarjeta"
           placeholder="YY">
+        </div>
         <input class="c-pago__input" id="codigoSeguridad" type="text" maxlength="3" size="6" name="codigoSeguridad"
           placeholder="3 dígitos">
       </div>
       <label class="c-pago__label" for="formasPago">Formas de pago válidas:</label>
-      <div class="c-icon--alternativo">
+      <div class="c-icon--alternativo-2">
         <i class="fa-brands fa-cc-visa fa-3x"></i>
         <i class="fa-brands fa-cc-mastercard fa-3x"></i>
         <i class="fa-brands fa-cc-paypal fa-3x"></i>
@@ -301,29 +303,44 @@
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE REGISTRO -->
 <dialog id="registro" class="c-modal">
-  <div class="c-registro l-flex l-flex--justify-content-center l-flex--align-items-center">
+  <div class="c-modal__content l-flex l-flex--direction-column"> 
+    <div class="c-modal__content__icon l-flex--align-self-end">
+        <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.registro.close()"></i>
+    </div>
     <form class="c-registro__form">
       <div class="c-registro__titulo">
         <label for="titulo">Formulario de registro</label>
       </div>
       <label class="c-registro__label" for="nombre">Nombre</label>
-      <input class="c-registro__input" id="nombreRegistro" type="text" size="30" name="nombreRegistro" placeholder="">
-      <label class="c-registro__label" for="apellido1">Primer apellido</label>
-      <input class="c-registro__input" id="apellido1Registro" type="text" size="30" name="apellido1Registro"
+      <input class="c-registro__input" id="nombreRegistro" type="text" size="25" name="nombreRegistro" placeholder="">
+      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-center">
+        <label class="c-registro__label" for="apellido1">Primer apellido</label>
+        <label class="c-registro__label" for="apellido2">Segundo apellido
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      </div>
+      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
+        <input class="c-registro__input" id="apellido1Registro" type="text" size="25" name="apellido1Registro"
+        placeholder="">&nbsp;&nbsp;&nbsp;
+      <input class="c-registro__input" id="apellido2Registro" type="text" size="25" name="apellido2Registro"
         placeholder="">
-      <label class="c-registro__label" for="apellido2">Segundo apellido</label>
-      <input class="c-registro__input" id="apellido2Registro" type="text" size="30" name="apellido2Registro"
-        placeholder="">
+      </div>
+      <div class="c-registro__label">&nbsp;</div>
       <label class="c-registro__label" for="correoRegistro">Correo electrónico</label>
-      <input class="c-registro__input" id="apellido1Registro" type="text" size="40" name="correoRegistro"
+      <input class="c-registro__input" id="apellido1Registro" type="text" size="25" name="correoRegistro"
         placeholder="">
-      <label class="c-registro__label" for="passwordRegistro">Contraseña</label>
-      <input class="c-registro__input" id="passwordRegistro" type="password" size="40" name="passwordRegistro"
+      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
+        <label class="c-registro__label" for="passwordRegistro">Contraseña</label>
+        <label class="c-registro__label" for="confirmarPasswordRegistro">Confirmar contraseña
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        </label>
+      </div>
+      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-center">
+        <input class="c-registro__input" id="passwordRegistro" type="password" size="25" name="passwordRegistro"
         placeholder="">
-      <label class="c-registro__label" for="confirmarPasswordRegistro">Confirmar contraseña</label>
-      <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" size="40"
+        <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" size="25"
         name="confirmarPasswordRegistro" placeholder="">
-
+      </div>
       <div class="c-registro__presentation">
         <button class="c-button">Confirmar registro</button>&nbsp;&nbsp;&nbsp;
         <button class="c-button c-button--alternativo" onclick="window.registro.close()">Cancelar</button>
