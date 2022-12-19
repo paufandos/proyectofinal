@@ -62,7 +62,7 @@ function pintarArticulos(id) {
 
     let images = layout.getElementsByClassName("c-item__img");
     for (let img of images) {
-        let rutaImg = "url('./assets/img/" + img.id + ".jpg')";
+        let rutaImg = "url('./assets/img/fotosProductos/" + img.id + ".jpg')";
         img.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0),80%, rgb(227, 219, 206))," + rutaImg;
     }
 }

@@ -106,7 +106,7 @@ let datos = [
             },
             {
                 "id": "17",
-                "nombre": "Biofrutas",
+                "nombre": "Bifrutas",
                 "descripcion": "zumos con leches con varios sabores",
                 "precio": 1.2
             },
