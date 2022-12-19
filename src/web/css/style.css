@@ -959,9 +959,15 @@ table {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+<<<<<<< HEAD
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+=======
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+>>>>>>> joseluis_11
   cursor: pointer;
 }
 .c-button--alternativo {
@@ -971,6 +977,7 @@ table {
 }
 .c-button:active {
   box-shadow: none;
+<<<<<<< HEAD
 }
 .c-button--warning {
   background-color: transparent;
@@ -1238,6 +1245,8 @@ table {
 }
 .c-modal::backdrop {
   background-color: rgba(0, 0, 0, 0.7) !important;
+=======
+>>>>>>> joseluis_11
 }
 
 .c-nav {
@@ -1257,12 +1266,98 @@ table {
   height: 80px;
   cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+.c-nav__title {
+  margin-left: auto;
+  height: 80px;
+  align-items: center;
+}
+
+.c-icon {
+  color: #823f44;
+  font-size: 36px;
+  margin: 12px;
+  cursor: pointer;
+}
+.c-icon--alternativo {
+  color: #619E7A;
+}
+
+.c-footer {
+  text-align: center;
+  background-color: #823f44;
+  padding: 12px;
+}
+.c-footer__item {
+  font-family: 'Lato', sans-serif;
+  color: #D6C9B8;
+  margin: 12px;
+}
+.c-footer__item--blanco {
+  color: #FCFCFC;
+}
+
+.c-card {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.c-card__nombre {
+  font-size: 36px;
+  font-family: Quicksand, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background-color: #BAA187;
+  color: #FAFAFA;
+  padding: 16px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.c-card__imagen {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.c-main {
+  background-image: url("../assets/img/pattern-02.jpg");
+  background-repeat: repeat-y;
+  padding: 64px;
+}
+.c-main--background-light {
+  background-image: url("../assets/img/pattern-01.jpg");
+}
+.c-main--background-semi-dark {
+  background-image: url("../assets/img/pattern-03.jpg");
+}
+.c-main--background-dark {
+  background-image: url("../assets/img/pattern-04.jpg");
+}
+>>>>>>> joseluis_11
 
 .c-products {
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 1fr));
   gap: 40px;
   text-align: center;
+<<<<<<< HEAD
+=======
+  padding: 40px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+>>>>>>> joseluis_11
   background-color: #D6C9B8;
   padding: 40px;
   -webkit-border-radius: 8px;
@@ -1270,6 +1365,7 @@ table {
   border-radius: 8px;
 }
 
+<<<<<<< HEAD
 .c-title {
   color: #823f44;
   font-size: 30px;
@@ -1277,6 +1373,117 @@ table {
   font-weight: 800;
   text-align: center;
   margin-bottom: 16px;
+=======
+.c-login {
+  background-color: #BAA187;
+  padding: 20px;
+  border-radius: 8px;
+}
+.c-login__form {
+  font-family: Quicksand, sans-serif;
+  background-color: #9B7559;
+  border-radius: 8px;
+  border-color: 5px solid #825F4A;
+  margin: 12px;
+  padding: 24px;
+  width: 350px;
+  height: 300px;
+  margin-bottom: 16px;
+}
+.c-login__presentation {
+  font-family: Quicksand, sans-serif;
+  color: #823f44;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+.c-login__label {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  color: #F0F0F0;
+  margin-top: 10px;
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+}
+.c-login__input {
+  font-size: 14px;
+  color: #823f44;
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  padding-left: 12px;
+}
+.c-login__contenido {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #619E7A;
+  margin-top: 24px;
+}
+.c-login__link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: #FCFCFC;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.c-modal {
+  border-width: 0;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.c-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.c-item {
+  background-color: #E3DBCE;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.c-item__img {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+  background-size: cover;
+}
+.c-item__title {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Quicksand, sans-serif;
+  color: #E3DBCE;
+  padding: 12px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #823f44;
+}
+.c-item__footer {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.c-item__price {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+}
+.c-item__icon--right {
+  margin-left: auto;
+}
+.c-item__icon--left {
+  margin-right: auto;
+>>>>>>> joseluis_11
 }
 
 .g--background-color-principal-0 {
@@ -3296,9 +3503,15 @@ table {
 }
 
 .g--box-shadow-0 {
+<<<<<<< HEAD
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+=======
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+>>>>>>> joseluis_11
 }
 
 .g--box-shadow-1 {

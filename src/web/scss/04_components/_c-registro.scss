@@ -1,9 +1,5 @@
-.c-login {
-<<<<<<< HEAD
+.c-registro {
   background-color: #BAA187;
-=======
-  background-color: getColors("principal", 3);
->>>>>>> joseluis_11
   padding: 20px;
   border-radius: 8px;
 
@@ -15,38 +11,38 @@
     border-color: 5px solid #825F4A;
     margin: getMargin(5);
     padding: getPadding(8);
-    width: 350px;
-<<<<<<< HEAD
-    height: 300px;
-=======
-    height: 350px;
->>>>>>> joseluis_11
+    width: 400px;
+    height: 650px;
     margin-bottom: getMargin(6);
+  }
+
+  &__titulo {
+    font-family: getFontFamily("principal");
+    color: getColors("principal", 6);
+    font-weight: bold;
+    font-size: getFontSize("3xl");
+    text-align: center;
+    padding-top: getPadding(4);
+    padding-bottom: getPadding(8);
+    margin:auto;
   }
 
   &__presentation {
     font-family: getFontFamily("principal");
     color: getColors("principal", 0);
     font-weight: bold;
-<<<<<<< HEAD
     font-size: getFontSize("2xl");
-=======
-    font-size: getFontSize("3xl");
->>>>>>> joseluis_11
     text-align: center;
+    margin-top: getMargin(10);
   }
 
   &__label {
     font-weight: bold;
     font-size: getFontSize("s");
     text-align: left;
-<<<<<<< HEAD
-    color: getColors("blanco", 5);
-=======
     color: getColors("principal", 6);
->>>>>>> joseluis_11
-    margin-top: getMargin(4);
-    margin-bottom: getMargin(9);
+    margin-top: getMargin(6);
+    margin-bottom: getMargin(1);
     padding-bottom: getPadding(5);
   }
 
@@ -54,9 +50,8 @@
     font-size: getFontSize("s");
     color: getColors("principal", 0);
     display: block;
-    width: 100%;
     height: 35px;
-    margin-top: getMargin(2);
+    margin-top: getMargin(1);
     margin-bottom: getMargin(7);
     padding-left: getPadding(5);
   }
@@ -66,20 +61,6 @@
     text-align: center;
     text-decoration: none;
     color: getColors("alternativo", 4);
-    margin-top: getPadding(8);
-  }
-
-  &__link {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 500;
-<<<<<<< HEAD
-    color: getColors("blanco", 1);
-=======
-    color: getColors("principal", 7);
->>>>>>> joseluis_11
-    font-size: getFontSize("xs");
-    margin-bottom: getMargin(3);
+    margin-top: getMargin(8);
   }
 }

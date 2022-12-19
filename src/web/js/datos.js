@@ -88,36 +88,42 @@ let datos = [
             },
             {
                 "id": "14",
+                "nombre": "Red Bull",
+                "descripcion": "lata de 20cl de Red Bull original.",
+                "precio": 2.2
+            },
+            {
+                "id": "15",
                 "nombre": "Zumos",
                 "descripcion": "botella de 33cl. de varios sabores",
                 "precio": 1.2
             },
             {
-                "id": "15",
+                "id": "16",
                 "nombre": "Batidos",
                 "descripcion": "Batidos de leche de varios sabores",
                 "precio": 1.2
             },
             {
-                "id": "16",
+                "id": "17",
                 "nombre": "Biofrutas",
                 "descripcion": "zumos con leches con varios sabores",
                 "precio": 1.2
             },
             {
-                "id": "17",
+                "id": "18",
                 "nombre": "Agua pequeña.",
                 "descripcion": "Botella de plástico de 33cl.",
                 "precio": 0.8
             },
             {
-                "id": "18",
+                "id": "19",
                 "nombre": "Agua con gas",
                 "descripcion": "Botella de plástico de 33cl.",
                 "precio": 0.8
             },
             {
-                "id": "19",
+                "id": "20",
                 "nombre": "Agua grande 1.5l",
                 "descripcion": "Botella de plástico de 1.5l",
                 "precio": 1.2
@@ -129,25 +135,25 @@ let datos = [
         "nombre":"bocadillos",
         "productos": [
             {
-                "id": "20",
+                "id": "21",
                 "nombre": "Bocadillo pequeño",
                 "descripcion": "medio Bocadillo con varios ingredientes",
                 "precio": 2
             },
             {
-                "id": "21",
-                "nombre": "Bocadillo entero con varios ingredientes",
-                "descripcion": "",
+                "id": "22",
+                "nombre": "Bocadillo completo",
+                "descripcion": "Bocadillo entero con varios ingredientes a elegir",
                 "precio": 2
             },
             {
-                "id": "22",
-                "nombre": "Pulga blanca con cereales",
+                "id": "23",
+                "nombre": "Pulga (montadito)",
                 "descripcion": "Mini bocadillo con varios ingredientes",
                 "precio": 1.7
             },
             {
-                "id": "23",
+                "id": "24",
                 "nombre": "Paninis",
                 "descripcion": "",
                 "precio": 1.2
@@ -159,25 +165,25 @@ let datos = [
         "nombre":"dulces",
         "productos": [
             {
-                "id": "24",
+                "id": "25",
                 "nombre": "Caracolas",
                 "descripcion": "",
                 "precio": 0.5
             },
             {
-                "id": "25",
+                "id": "26",
                 "nombre": "MiniEnsaimadas",
                 "descripcion": "",
                 "precio": 0.5
             },
             {
-                "id": "26",
+                "id": "27",
                 "nombre": "Caracola Grande",
                 "descripcion": "",
                 "precio": 1.2
             },
             {
-                "id": "27",
+                "id": "28",
                 "nombre": "Triángulo de chocolate",
                 "descripcion": "",
                 "precio": 1.5
@@ -189,26 +195,34 @@ let datos = [
         "nombre":"salados",
         "productos": [
             {
-                "id": "28",
-                "nombre": "Empanadillas",
+                "id": "29",
+                "nombre": "Empanadilla de pisto",
                 "descripcion": "",
                 "precio": 1.2
             },
             {
-                "id": "29",
-                "nombre": "Napolitanas jamón/queso",
-                "descripcion": "",
-                "precio": 1.5
-            },
-            {
                 "id": "30",
+<<<<<<< HEAD
                 "nombre": "Hojaldre de carne",
+=======
+                "nombre": "Empanadilla de espinacas",
+>>>>>>> joseluis_11
                 "descripcion": "",
                 "precio": 1.5
             },
             {
                 "id": "31",
+<<<<<<< HEAD
                 "nombre": "Tartaleta de queso",
+=======
+                "nombre": "Napolitanas jamón/queso",
+                "descripcion": "",
+                "precio": 1.5
+            },
+            {
+                "id": "32",
+                "nombre": "Rosquilletas",
+>>>>>>> joseluis_11
                 "descripcion": "",
                 "precio": 1.5
             }
@@ -218,12 +232,6 @@ let datos = [
     {
         "nombre":"snacks",
         "productos": [
-            {
-                "id": "32",
-                "nombre": "Rosquilletas",
-                "descripcion": "",
-                "precio": 1.2
-            },
             {
                 "id": "33",
                 "nombre": "Mikado",
@@ -237,38 +245,48 @@ let datos = [
                 "precio": 1.2
             },
             {
-                "id": "32",
+                "id": "35",
                 "nombre": "Kinder blanco/negro",
                 "descripcion": "",
                 "precio": 1.2
             },
             {
-                "id": "33",
+                "id": "36",
                 "nombre": "Krits",
                 "descripcion": "",
                 "precio": 1.2
             },
             {
-                "id": "34",
+                "id": "37",
                 "nombre": "Filipinos",
                 "descripcion": "",
                 "precio": 1
             },
             {
-                "id": "35",
+                "id": "38",
                 "nombre": "Halls",
                 "descripcion": "",
                 "precio": 1
             },
             {
+<<<<<<< HEAD
                 "id": "36",
                 "nombre": "Bolsas de chuches grande",
+=======
+                "id": "39",
+                "nombre": "Bolsas de chuches",
+>>>>>>> joseluis_11
                 "descripcion": "",
                 "precio": 1
             },
             {
+<<<<<<< HEAD
                 "id": "36",
                 "nombre": "Bolsas de chuches pequeña",
+=======
+                "id": "40",
+                "nombre": "Bolsas de chuches",
+>>>>>>> joseluis_11
                 "descripcion": "",
                 "precio": 0.5
             }

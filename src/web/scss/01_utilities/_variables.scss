@@ -44,9 +44,17 @@ $background-images: (
 );
 
 $shadow: (
+<<<<<<< HEAD
     "0px 1px 3px rgba(0, 0, 0, 0.2)",
     "0px 4px 6px rgba(0, 0, 0, 0.2)",
     "0px 5px 15px rgba(0, 0, 0, 0.2)",
     "0px 10px 24px rgba(0, 0, 0, 0.2)",
     "0px 15px 35px rgba(0, 0, 0, 0.2)",
+=======
+    "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+    "0 4px 6px darkgray",
+    "0 5px 15px darkgray",
+    "0 10px 24px darkgray",
+    "0 15px 35px darkgray"
+>>>>>>> joseluis_11
 );

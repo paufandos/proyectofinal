@@ -1,5 +1,6 @@
 .c-modal {
   border-width: 0;
+<<<<<<< HEAD
   border-radius: getBorderRadius(5);
 
   padding: getPadding(0);
@@ -16,4 +17,12 @@
   &::backdrop {
     background-color: rgb(0, 0, 0, 0.7) !important;
   }
+=======
+  border-radius: 8px;
+  padding: 0;
+}
+
+.c-modal::backdrop {
+  background-color: rgb(0, 0, 0, 0.6) !important;
+>>>>>>> joseluis_11
 }

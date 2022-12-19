@@ -4,7 +4,12 @@
 
     &__img {
         width: 100%;
+<<<<<<< HEAD
         height: 40vh;
+=======
+        height: 20vw;
+        object-fit: cover;
+>>>>>>> joseluis_11
         background-size: cover;
     }
 
@@ -13,7 +18,13 @@
         font-weight: 600;
         font-family: getFontFamily("principal");
 
+<<<<<<< HEAD
         color: getColors("principal", 6);
+=======
+        padding: getPadding(5);
+        @include border-top-left-radius(4);
+        @include border-top-right-radius(4);
+>>>>>>> joseluis_11
         background-color: getColors("principal", 0);
 
         padding-left: getPadding(5);
@@ -35,9 +46,13 @@
         font-size: getFontSize("2xl");
         font-weight: 700;
         font-family: getFontFamily("alternativo");
+<<<<<<< HEAD
         
         margin-top: getMargin(3);
         margin-bottom: getMargin(3);
+=======
+        color: green;
+>>>>>>> joseluis_11
     }
 
     &__icon {
