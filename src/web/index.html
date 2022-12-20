@@ -53,7 +53,8 @@
 
 <!-- Componente HTML para dialogos modal FORMULARIO LOGIN -->
 <dialog id="login" class="c-modal">
-  <div class="c-modal__content l-flex l-flex--direction-column"> 
+  <div class="c-modal c-modal--medium">
+    <div class="c-modal__content l-flex l-flex--direction-column"> 
     <div class="c-modal__content__icon l-flex--align-self-end">
         <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.login.close()"></i>
     </div>
@@ -86,11 +87,14 @@
         </div>
       </div>
   </div>
+  </div>
+  
 </dialog>
 
 <!-- Componente HTML para dialogos modal DETALLE PRODUCTO -->
 <dialog class="c-modal" id="detalleproducto">
-  <div class="c-modal__content l-flex l-flex--direction-column"> 
+  <div class="c-modal c-modal--large">
+    <div class="c-modal__content l-flex l-flex--direction-column"> 
       <div class="c-modal__icon l-flex--align-self-end">
           <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.detalleproducto.close()"></i>
       </div>
@@ -103,16 +107,20 @@
               <div class="c-product__informacion__precio ">0.50 €</div>&nbsp;&nbsp;&nbsp;
               <div></div>
               <button class ="c-button"><i class="fa-solid fa-cart-plus">&nbsp;&nbsp;&nbsp;</i>Comprar</button>
+  
             </div>
         </div>
       </div>
   </div>
+  </div>
+  
 </dialog>
 
 
 <!-- Componente HTML para dialogos modal CARRITO -->
 <dialog id="carrito" class="c-modal">
-  <div class="g--background-color-principal-3 g--padding-7">
+  <div class="c-modal c-modal--large">
+    <div class="g--background-color-principal-3 g--padding-7">
     <div class="g--text-align-right">
       <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.carrito.close()"></i>
     </div>
@@ -173,11 +181,14 @@
       </div>
     </div>
   </div>
+  </div>
+  
 </dialog>
 
 <!-- Componente HTML para dialogos modal HISTORIAL CARRITO -->
 <dialog id="historialCarrito" class="c-modal">
-  <div class="g--background-color-principal-3 g--padding-top-5 g--padding-bottom-9 g--padding-horizontal-9">
+  <div class="c-modal c-modal--large">
+    <div class="g--background-color-principal-3 g--padding-top-5 g--padding-bottom-9 g--padding-horizontal-9">
     <div class="g--text-align-right">
       <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.historialCarrito.close()"></i>
     </div>
@@ -263,11 +274,14 @@
       </div>
       <div class="c-cart__price">Total: 5.20 €</div>
     </div>
+  </div>
+  
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE PAGO -->
 <dialog id="pago" class="c-modal">
-  <div class="c-modal__content l-flex l-flex--direction-column">
+  <div class="c-modal c-modal--xsmall">
+    <div class="c-modal__content l-flex l-flex--direction-column">
     <div class="c-modal__content__icon l-flex--align-self-end">
         <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.pago.close()"></i>
     </div>
@@ -313,11 +327,14 @@
       </form>
     </div>
   </div>
+  </div>
+  
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE REGISTRO -->
 <dialog id="registro" class="c-modal">
-  <div class="c-modal__content l-flex l-flex--direction-column">
+  <div class="c-modal c-modal--xsmall">
+    <div class="c-modal__content l-flex l-flex--direction-column">
     <div class="c-modal__content__icon l-flex--align-self-end">
         <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.registro.close()"></i>
     </div>
@@ -355,6 +372,8 @@
       </div>
     </form>
   </div>
+  </div>
+  
 </dialog>
 
 </html>

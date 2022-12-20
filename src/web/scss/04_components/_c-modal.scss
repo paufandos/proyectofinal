@@ -16,4 +16,26 @@
   &::backdrop {
     background-color: rgb(0, 0, 0, 0.7) !important;
   }
+
+  &--xsmall{
+    width: 40vw;
+  }
+
+  &--small{
+    width: 45vw;
+  }
+
+  &--medium{
+    width: 50vw;
+
+  }
+
+  &--large{
+    width: 60vw;
+
+  }
+
+  &--extraLarge{
+    width: 80vw;
+  }
 }
