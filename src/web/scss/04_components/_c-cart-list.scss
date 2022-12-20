@@ -1,0 +1,32 @@
+.c-cart-list {
+    font-family: getFontFamily("principal");
+    color: getColors("principal", 0);
+    font-size: getFontSize("m");
+
+    background-color: getColors("principal",5);
+    padding: getPadding(8);
+    @include border-radius(4);
+    max-width: 800px;
+
+    &__title {
+        color: getColors("principal",0);
+        font-size: getFontSize("3xl");
+        font-family: getFontFamily("principal");
+        font-weight: 800;
+        margin-bottom: getMargin(8);
+        text-align: center;
+    }
+
+    &__element {
+        display: grid; 
+        grid-template-columns: repeat(6, 1fr); 
+        align-items: center;
+        padding-top: getPadding(4);
+        padding-bottom: getPadding(4);
+        border-bottom: 1px solid getColors("principal",2);
+    }
+
+    &__title-cart {
+        font-weight: bold;
+    }
+}

@@ -52,9 +52,8 @@
 </body>
 
 <!-- Componente HTML para dialogos modal FORMULARIO LOGIN -->
-<dialog id="login" class="c-modal">
-  <div class="c-modal c-modal--medium">
-    <div class="c-modal__content l-flex l-flex--direction-column"> 
+<dialog id="login" class="c-modal c-modal--medium">
+  <div class="c-modal__content l-flex l-flex--direction-column"> 
     <div class="c-modal__content__icon l-flex--align-self-end">
         <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.login.close()"></i>
     </div>
@@ -87,13 +86,11 @@
         </div>
       </div>
   </div>
-  </div>
-  
+</div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal DETALLE PRODUCTO -->
-<dialog class="c-modal" id="detalleproducto">
-  <div class="c-modal c-modal--large">
+<dialog id="detalleproducto" class="c-modal c-modal--large">
     <div class="c-modal__content l-flex l-flex--direction-column"> 
       <div class="c-modal__icon l-flex--align-self-end">
           <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.detalleproducto.close()"></i>
@@ -111,16 +108,13 @@
             </div>
         </div>
       </div>
-  </div>
-  </div>
-  
+  </div> 
 </dialog>
 
 
 <!-- Componente HTML para dialogos modal CARRITO -->
-<dialog id="carrito" class="c-modal">
-  <div class="c-modal c-modal--large">
-    <div class="g--background-color-principal-3 g--padding-7">
+<dialog id="carrito" class="c-modal c-modal--large">
+  <div class="g--background-color-principal-1 g--padding-7">
     <div class="g--text-align-right">
       <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.carrito.close()"></i>
     </div>
@@ -143,8 +137,8 @@
         <div>1</div>
         <div>0.80 €</div>
         <div>
-          <button href="#" class="c-button">+</button>
-          <button href="#" class="c-button">-</button>
+          <button href="#" class="c-button">+</button> 
+          <button href="#" class="c-button">-</button> 
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
@@ -156,8 +150,8 @@
         <div>1</div>
         <div>2.00 €</div>
         <div>
-          <button href="#" class="c-button">+</button>
-          <button href="#" class="c-button">-</button>
+          <button href="#" class="c-button">+</button> 
+          <button href="#" class="c-button">-</button> 
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
@@ -169,32 +163,86 @@
         <div>3</div>
         <div>1.50 €</div>
         <div>
-          <button href="#" class="c-button">+</button>
-          <button href="#" class="c-button">-</button>
+          <button href="#" class="c-button">+</button> 
+          <button href="#" class="c-button">-</button> 
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
       <div class="c-cart__price">Total: 4.30 €</div>
       <div class="c-cart__footer">
           <button href="#" class="c-button g--margin-right-9" onclick="window.pago.showModal()">Confirmar carrito</button>
-          <button href="#" class="c-button c-button--alternativo" onclick="window.carrito.close()">Seguir comprando</button>
       </div>
     </div>
-  </div>
-  </div>
-  
+  </div>  
 </dialog>
 
-<!-- Componente HTML para dialogos modal HISTORIAL CARRITO -->
+<!-- Componente HTML para dialogos modal HISTORIAL CARRITO-->
 <dialog id="historialCarrito" class="c-modal">
-  <div class="c-modal c-modal--large">
-    <div class="g--background-color-principal-3 g--padding-top-5 g--padding-bottom-9 g--padding-horizontal-9">
+  <div class="g--background-color-principal-1 g--padding-top-5 g--padding-bottom-11 g--padding-horizontal-11">
     <div class="g--text-align-right">
       <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.historialCarrito.close()"></i>
     </div>
-    <div class="c-title">Listado carritos</div>
-    <div class="c-cart c-cart--list-item">
-      <span class="c-cart__label c-cart__label--unpaid">PENDIENTE DE PAGO</span>
+    <div class="c-cart-list">
+      <div class="c-cart-list__title">Listado carritos</div>
+      <div class="c-cart-list__element">
+        <div class="c-cart-list__title-cart">Carrito 247</div>
+        <div>Pendiente de pago</div>
+        <div><i class="c-icon fa-solid fa-eye" onclick="window.carrito247.showModal()"></i></div>
+        <div><button class="c-button" onclick="window.pago.showModal()">Pagar</button></div>
+        <div><button class="c-button">Recuperar</button></div>
+        <div><button class="c-button c-button--danger g--margin-left-8">Borrar</button></div>
+      </div>
+      <div class="c-cart-list__element">
+        <div class="c-cart-list__title-cart">Carrito 246</div>
+        <div>Pagado</div>
+        <div><i class="c-icon fa-solid fa-eye" onclick="window.carrito246.showModal()"></i></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="c-cart-list__element">
+        <div class="c-cart-list__title-cart">Carrito 240</div>
+        <div>Pagado</div>
+        <div><i class="c-icon fa-solid fa-eye" onclick="window.carrito246.showModal()"></i></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="c-cart-list__element">
+        <div class="c-cart-list__title-cart">Carrito 237</div>
+        <div>Pendiente de pago</div>
+        <div><i class="c-icon fa-solid fa-eye" onclick="window.carrito247.showModal()"></i></div>
+        <div><button class="c-button" onclick="window.pago.showModal()">Pagar</button></div>
+        <div><button class="c-button">Recuperar</button></div>
+        <div><button class="c-button c-button--danger g--margin-left-8">Borrar</button></div>
+      </div>
+      <div class="c-cart-list__element">
+        <div class="c-cart-list__title-cart">Carrito 234</div>
+        <div>Pendiente de pago</div>
+        <div><i class="c-icon fa-solid fa-eye" onclick="window.carrito247.showModal()"></i></div>
+        <div><button class="c-button" onclick="window.pago.showModal()">Pagar</button></div>
+        <div><button class="c-button">Recuperar</button></div>
+        <div><button class="c-button c-button--danger g--margin-left-8">Borrar</button></div>
+      </div>
+      <div class="c-cart-list__element">
+        <div class="c-cart-list__title-cart">Carrito 212</div>
+        <div>Pagado</div>
+        <div><i class="c-icon fa-solid fa-eye" onclick="window.carrito246 .showModal()"></i></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Modales carritos para histórico-->
+<dialog id="carrito247" class="c-modal">
+  <div class="g--background-color-principal-1 g--padding-7">
+    <div class="g--text-align-right">
+      <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.carrito247.close()"></i>
+    </div>
+    <div class="c-cart">
       <div class="c-cart__title">Carrito 247</div>
       <div class="c-cart__head">
         <div></div>
@@ -232,13 +280,19 @@
       <div class="c-cart__price">Total: 4.30 €</div>
       <div class="c-cart__footer">
           <button href="#" class="c-button g--margin-right-7" onclick="window.pago.showModal()">Pagar</button>
-          <button href="#" class="c-button c-button--alternativo g--margin-right-7">Recuperar</button>
-          <button href="#" class="c-button c-button--danger-third">Borrar</button>
+          <button href="#" class="c-button g--margin-right-7">Recuperar</button>
+          <button href="#" class="c-button c-button--danger">Borrar</button>
       </div>
     </div>
-  
-    <div class="c-cart c-cart--list-item">
-      <span class="c-cart__label c-cart__label--paid">PAGADO</span>
+  </div>
+</dialog>
+
+<dialog id="carrito246" class="c-modal">
+  <div class="g--background-color-principal-1 g--padding-7">
+    <div class="g--text-align-right">
+      <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.carrito246.close()"></i>
+    </div>
+    <div class="c-cart">
       <div class="c-cart__title">Carrito 246</div>
       <div class="c-cart__head">
         <div></div>
@@ -279,9 +333,8 @@
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE PAGO -->
-<dialog id="pago" class="c-modal">
-  <div class="c-modal c-modal--xsmall">
-    <div class="c-modal__content l-flex l-flex--direction-column">
+<dialog id="pago" class="c-modal c-modal--xsmall">
+  <div class="c-modal__content l-flex l-flex--direction-column">
     <div class="c-modal__content__icon l-flex--align-self-end">
         <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.pago.close()"></i>
     </div>
@@ -326,15 +379,12 @@
         </div>
       </form>
     </div>
-  </div>
-  </div>
-  
+  </div> 
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE REGISTRO -->
-<dialog id="registro" class="c-modal">
-  <div class="c-modal c-modal--xsmall">
-    <div class="c-modal__content l-flex l-flex--direction-column">
+<dialog id="registro" class="c-modal c-modal--xsmall">
+  <div class="c-modal__content l-flex l-flex--direction-column">
     <div class="c-modal__content__icon l-flex--align-self-end">
         <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.registro.close()"></i>
     </div>
@@ -371,9 +421,7 @@
         <button class="c-button">Confirmar registro</button>
       </div>
     </form>
-  </div>
-  </div>
-  
+  </div>  
 </dialog>
 
 </html>

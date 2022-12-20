@@ -1,15 +1,14 @@
 .c-cart {
     font-family: getFontFamily("principal");
-    background-color: getColors("principal",1);
+    background-color: getColors("principal",5);
     padding: getPadding(8);
     margin-left:getMargin(8);
     margin-right:getMargin(8);
     margin-bottom: getMargin(8);
     @include border-radius(4);
-    max-width: 796px;
     
     &__title {
-        color: getColors("principal", 6);
+        color: getColors("principal", 0);
         font-size: getFontSize("3xl");
         font-weight: bold;
 
@@ -23,13 +22,13 @@
         grid-template-columns: 0.7fr 1.3fr 1.5fr 0.5fr 0.5fr 0.5fr 2fr;
         gap: getGap(6);
 
-        color: getColors("principal", 6);
+        color: getColors("principal", 0);
         font-size: getFontSize("m");
         font-weight: bold;
 
         padding-top: getPadding(4);
         padding-bottom: getPadding(4);
-        border-bottom: 1px solid getColors("principal",0);
+        border-bottom: 1px solid getColors("principal",2);
     }
 
     &__row {
@@ -37,12 +36,12 @@
         grid-template-columns: 0.7fr 1.3fr 1.5fr 0.5fr 0.5fr 0.5fr 2fr;
         gap: getGap(6);
 
-        color: getColors("blanco",0);
+        color: getColors("principal",0);
         font-size: getFontSize("m");
 
         padding-top: getPadding(4);
         padding-bottom: getPadding(4);
-        border-bottom: 1px solid getColors("principal",0);
+        border-bottom: 1px solid getColors("principal",2);
     }
 
     &__img {
@@ -50,7 +49,7 @@
     }
 
     &__price {
-        color: getColors("principal", 6);
+        color: getColors("principal", 0);
         font-size: getFontSize("2xl");
         font-weight: 600;
 
@@ -59,9 +58,8 @@
     }
 
     &__delete-row {
-        color: getColors("principal", 6);
+        color: getColors("principal", 0);
         font-size: getFontSize("m");
-        text-decoration: none;
 
         margin-left: getMargin(2);
     }
@@ -74,22 +72,5 @@
 
     &--list-item {
         margin-bottom: getMargin(9);
-    }
-
-    &__label{
-        color: getColors("blanco",1);
-        font-size: getFontSize("xs");
-        font-weight: 800;
-        @include border-radius(4);
-        padding: getPadding(4);
-
-        &--paid{
-            background-color: getColors("principal",6);
-            color: getColors("rojo",7);
-        }
-
-        &--unpaid{
-            background-color: getColors("principal",0);
-        }
     }
 }
