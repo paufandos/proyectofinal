@@ -13,29 +13,55 @@
     border-radius: getBorderRadius(4);
   }
 
-  &::backdrop {
-    background-color: rgb(0, 0, 0, 0.7) !important;
-  }
-
-  &--xsmall{
+  &--xsmall {
     width: 30vw;
   }
 
-  &--small{
+  &--small {
     width: 45vw;
   }
 
-  &--medium{
+  &--medium {
     width: 50vw;
 
   }
 
-  &--large{
+  &--large {
     width: 60vw;
 
   }
 
-  &--extraLarge{
+  &--extraLarge {
     width: 80vw;
+  }
+
+  &::backdrop {
+    background-color: rgb(0, 0, 0, 0.7) !important;
+  }
+
+  animation: show 0.75s ease normal;
+
+  @keyframes show {
+    from {
+      transform: scale(0%);
+    }
+
+    to {
+      transform: scale(100%);
+    }
+  }
+
+  &--close {
+    animation: hide 0.75s ease normal;
+
+    @keyframes hide {
+      from {
+        transform: scale(100%);
+      }
+
+      to {
+        transform: scale(0%);
+      }
+    }
   }
 }

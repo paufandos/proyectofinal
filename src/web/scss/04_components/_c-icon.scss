@@ -5,11 +5,11 @@
     cursor: pointer;
 
     &--alternativo {
-        color: getColors("alternativo", 5);
+        color: getColors("alternativo", 3);
         margin: getMargin(5);
     }
 
-    &--alternativo-2 {
+    &--lighter {
         color: getColors("principal", 8);
         margin-top: getMargin(2);
     }
@@ -20,5 +20,4 @@
         font-size: getFontSize("2xl");
         cursor: pointer;
     }
-
 }

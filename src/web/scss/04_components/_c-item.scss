@@ -16,11 +16,12 @@
         color: getColors("principal", 6);
         background-color: getColors("principal", 0);
 
-        padding-left: getPadding(5);
-        padding-right: getPadding(5);
-        padding-top: getPadding(8);
-        padding-bottom: getPadding(8);
+        padding-left: getPadding(7);
+        padding-right: getPadding(7);
+        padding-top: getPadding(11);
+        padding-bottom: getPadding(11);
 
+        height: 10vh;
         @include border-top-left-radius(4);
         @include border-top-right-radius(4);
     }

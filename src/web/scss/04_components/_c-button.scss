@@ -24,13 +24,27 @@
     border-color: getColors("rojo", 6);
   }
 
+  &:hover {
+    background-color: #541C24;
+    border-color: #541C24;
+  }
+
   &--alternativo {
     background-color: getColors("principal", 5);
     color: getColors("principal", 0);
     border-color: getColors("principal", 5);
+
+    &:hover {
+      background-color: getColors("principal", 4);
+      border-color: getColors("principal", 4);
+    }
   }
 
   &:active {
     box-shadow: none;
+  }
+
+  &:focus {
+    outline: 0;
   }
 }

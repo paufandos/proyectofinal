@@ -1,7 +1,10 @@
 .c-main{
     background-image: url(getBackgroundImage("medium"));
     background-repeat: repeat;
-    padding: getPadding(12);
+    padding-top: getPadding(12);
+    padding-bottom: getPadding(12);
+    padding-left: getPadding(12);
+    padding-right: getPadding(12);
 
     &--background-light{
         background-image: url(getBackgroundImage("light"));

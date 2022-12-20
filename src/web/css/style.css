@@ -14,6 +14,10 @@ html {
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 /* Sections
    ========================================================================== */
 /**
@@ -177,6 +181,7 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 /**
@@ -260,6 +265,7 @@ textarea {
  */
 [type=search] {
   -webkit-appearance: textfield; /* 1 */
+  appearance: textfield;
   outline-offset: -2px; /* 2 */
 }
 
@@ -1011,13 +1017,24 @@ table {
   color: #FFFFFF;
   border-color: #d50101;
 }
+.c-button:hover {
+  background-color: #541C24;
+  border-color: #541C24;
+}
 .c-button--alternativo {
   background-color: #D6C9B8;
   color: #823f44;
   border-color: #D6C9B8;
 }
+.c-button--alternativo:hover {
+  background-color: #C7B49E;
+  border-color: #C7B49E;
+}
 .c-button:active {
   box-shadow: none;
+}
+.c-button:focus {
+  outline: 0;
 }
 
 .c-card {
@@ -1059,8 +1076,6 @@ table {
   font-size: 16px;
   background-color: #D6C9B8;
   padding: 24px;
-  margin-left: 24px;
-  margin-right: 24px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -1171,10 +1186,10 @@ table {
   cursor: pointer;
 }
 .c-icon--alternativo {
-  color: #80B79A;
+  color: #487F5D;
   margin: 12px;
 }
-.c-icon--alternativo-2 {
+.c-icon--lighter {
   color: #FFFFFF;
   margin-top: 6px;
 }
@@ -1202,10 +1217,11 @@ table {
   font-family: Quicksand, sans-serif;
   color: #E3DBCE;
   background-color: #823f44;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  height: 10vh;
   -webkit-border-top-left-radius: 8px;
   -moz-border-top-left-radius: 8px;
   border-top-left-radius: 8px;
@@ -1309,7 +1325,10 @@ table {
 .c-main {
   background-image: url("../assets/img/pattern-02.jpg");
   background-repeat: repeat;
-  padding: 64px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 .c-main--background-light {
   background-image: url("../assets/img/pattern-01.jpg");
@@ -1326,6 +1345,7 @@ table {
   border-radius: 16px;
   padding: 0px;
   max-width: 1000px;
+  animation: show 0.75s ease normal;
 }
 .c-modal__content {
   display: flex;
@@ -1334,9 +1354,6 @@ table {
   background-color: #9B7559;
   padding: 20px;
   border-radius: 8px;
-}
-.c-modal::backdrop {
-  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 .c-modal--xsmall {
   width: 30vw;
@@ -1352,6 +1369,28 @@ table {
 }
 .c-modal--extraLarge {
   width: 80vw;
+}
+.c-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+@keyframes show {
+  from {
+    transform: scale(0%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+.c-modal--close {
+  animation: hide 0.75s ease normal;
+}
+@keyframes hide {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(0%);
+  }
 }
 
 .c-nav {

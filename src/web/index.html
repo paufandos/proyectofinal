@@ -53,9 +53,9 @@
 
 <!-- Componente HTML para dialogos modal FORMULARIO LOGIN -->
 <dialog id="login" class="c-modal c-modal--medium">
-  <div class="c-modal__content l-flex l-flex--direction-column"> 
+  <div class="c-modal__content l-flex l-flex--direction-column">
     <div class="c-modal__content__icon l-flex--align-self-end">
-        <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.login.close()"></i>
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
     </div>
     <div class="c-login l-flex l-flex--justify-content-center l-flex--align-items-center">
       <form class="c-login__form">
@@ -85,30 +85,31 @@
           <button class="c-button c-button--alternativo" onclick="window.registro.showModal()">Regístrarse</button>
         </div>
       </div>
+    </div>
   </div>
-</div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal DETALLE PRODUCTO -->
 <dialog id="detalleproducto" class="c-modal c-modal--large">
-    <div class="c-modal__content l-flex l-flex--direction-column"> 
-      <div class="c-modal__icon l-flex--align-self-end">
-          <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.detalleproducto.close()"></i>
-      </div>
-      <div class="c-product l-flex l-flex--justify-content-end l-columns l-flex--align-items-center">
-        <img src="assets/img/croissants.png" class="c-product__img">
-        <div class="c-product__informacion">
-            <div class=" c-product__informacion__titulo">Croissant</div>
-            <div class=" c-product__informacion__descripcion">Desde París con amor. Un clásico de nuestro aparador. Elaborado con largos reposos, ingredientes naturales y mantequilla de la máxima calidad.</div>              
-            <div class=" l-flex l-flex--direction-row l-flex l-flex--justify-content-space-between">
-              <div class="c-product__informacion__precio ">0.50 €</div>&nbsp;&nbsp;&nbsp;
-              <div></div>
-              <button class ="c-button"><i class="fa-solid fa-cart-plus">&nbsp;&nbsp;&nbsp;</i>Comprar</button>
-  
-            </div>
+  <div class="c-modal__content l-flex l-flex--direction-column">
+    <div class="c-modal__icon l-flex--align-self-end">
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
+    </div>
+    <div class="c-product l-flex l-flex--justify-content-end l-columns l-flex--align-items-center">
+      <img src="assets/img/croissants.png" class="c-product__img">
+      <div class="c-product__informacion">
+        <div class=" c-product__informacion__titulo">Croissant</div>
+        <div class=" c-product__informacion__descripcion">Desde París con amor. Un clásico de nuestro aparador.
+          Elaborado con largos reposos, ingredientes naturales y mantequilla de la máxima calidad.</div>
+        <div class=" l-flex l-flex--direction-row l-flex l-flex--justify-content-space-between">
+          <div class="c-product__informacion__precio ">0.50 €</div>&nbsp;&nbsp;&nbsp;
+          <div></div>
+          <button class="c-button"><i class="fa-solid fa-cart-plus">&nbsp;&nbsp;&nbsp;</i>Comprar</button>
+
         </div>
       </div>
-  </div> 
+    </div>
+  </div>
 </dialog>
 
 
@@ -116,7 +117,7 @@
 <dialog id="carrito" class="c-modal c-modal--large">
   <div class="g--background-color-principal-1 g--padding-7">
     <div class="g--text-align-right">
-      <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.carrito.close()"></i>
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
     </div>
     <div class="c-cart">
       <div class="c-cart__title">Carrito 247</div>
@@ -137,8 +138,8 @@
         <div>1</div>
         <div>0.80 €</div>
         <div>
-          <button href="#" class="c-button">+</button> 
-          <button href="#" class="c-button">-</button> 
+          <button href="#" class="c-button">+</button>
+          <button href="#" class="c-button">-</button>
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
@@ -150,8 +151,8 @@
         <div>1</div>
         <div>2.00 €</div>
         <div>
-          <button href="#" class="c-button">+</button> 
-          <button href="#" class="c-button">-</button> 
+          <button href="#" class="c-button">+</button>
+          <button href="#" class="c-button">-</button>
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
@@ -163,24 +164,24 @@
         <div>3</div>
         <div>1.50 €</div>
         <div>
-          <button href="#" class="c-button">+</button> 
-          <button href="#" class="c-button">-</button> 
+          <button href="#" class="c-button">+</button>
+          <button href="#" class="c-button">-</button>
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
       <div class="c-cart__price">Total: 4.30 €</div>
       <div class="c-cart__footer">
-          <button href="#" class="c-button g--margin-right-9" onclick="window.pago.showModal()">Confirmar carrito</button>
+        <button href="#" class="c-button g--margin-right-9" onclick="window.pago.showModal()">Confirmar carrito</button>
       </div>
     </div>
-  </div>  
+  </div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal HISTORIAL CARRITO-->
 <dialog id="historialCarrito" class="c-modal">
   <div class="g--background-color-principal-1 g--padding-top-5 g--padding-bottom-11 g--padding-horizontal-11">
     <div class="g--text-align-right">
-      <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.historialCarrito.close()"></i>
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
     </div>
     <div class="c-cart-list">
       <div class="c-cart-list__title">Listado carritos</div>
@@ -240,7 +241,7 @@
 <dialog id="carrito247" class="c-modal">
   <div class="g--background-color-principal-1 g--padding-7">
     <div class="g--text-align-right">
-      <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.carrito247.close()"></i>
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
     </div>
     <div class="c-cart">
       <div class="c-cart__title">Carrito 247</div>
@@ -279,9 +280,9 @@
       </div>
       <div class="c-cart__price">Total: 4.30 €</div>
       <div class="c-cart__footer">
-          <button href="#" class="c-button g--margin-right-7" onclick="window.pago.showModal()">Pagar</button>
-          <button href="#" class="c-button g--margin-right-7">Recuperar</button>
-          <button href="#" class="c-button c-button--danger">Borrar</button>
+        <button href="#" class="c-button g--margin-right-7" onclick="window.pago.showModal()">Pagar</button>
+        <button href="#" class="c-button g--margin-right-7">Recuperar</button>
+        <button href="#" class="c-button c-button--danger">Borrar</button>
       </div>
     </div>
   </div>
@@ -290,7 +291,7 @@
 <dialog id="carrito246" class="c-modal">
   <div class="g--background-color-principal-1 g--padding-7">
     <div class="g--text-align-right">
-      <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.carrito246.close()"></i>
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
     </div>
     <div class="c-cart">
       <div class="c-cart__title">Carrito 246</div>
@@ -329,14 +330,14 @@
       <div class="c-cart__price">Total: 5.20 €</div>
     </div>
   </div>
-  
+
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE PAGO -->
 <dialog id="pago" class="c-modal c-modal--xsmall">
   <div class="c-modal__content l-flex l-flex--direction-column">
     <div class="c-modal__content__icon l-flex--align-self-end">
-        <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.pago.close()"></i>
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
     </div>
     <div class="c-pago l-flex l-flex--justify-content-center l-flex--align-items-center">
       <form class="c-pago__form">
@@ -358,16 +359,16 @@
         <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
           <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
             <input class="c-pago__input" id="mesTarjeta" type="text" maxlength="2" size="4" name="mesTarjeta"
-            placeholder="MM">&nbsp;&nbsp;&nbsp;
+              placeholder="MM">&nbsp;&nbsp;&nbsp;
             <input class="c-pago__input" id="anyoTarjeta" type="text" maxlength="2" size="4" name="anyoTarjeta"
-            placeholder="YY">
+              placeholder="YY">
           </div>
           <input class="c-pago__input" id="codigoSeguridad" type="text" maxlength="3" size="6" name="codigoSeguridad"
             placeholder="3 dígitos">
         </div>
         <div>&nbsp;</div>
         <label class="c-pago__label" for="formasPago">Formas de pago válidas:</label>
-        <div class="c-icon--alternativo-2">
+        <div class="c-icon--lighter">
           <i class="fa-brands fa-cc-visa fa-3x"></i>
           <i class="fa-brands fa-cc-mastercard fa-3x"></i>
           <i class="fa-brands fa-cc-paypal fa-3x"></i>
@@ -379,49 +380,46 @@
         </div>
       </form>
     </div>
-  </div> 
+  </div>
 </dialog>
 
 <!-- Componente HTML para dialogos modal FORMULARIO DE REGISTRO -->
 <dialog id="registro" class="c-modal c-modal--xsmall">
   <div class="c-modal__content l-flex l-flex--direction-column">
     <div class="c-modal__content__icon l-flex--align-self-end">
-        <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.registro.close()"></i>
+      <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
     </div>
     <form class="c-registro__form">
       <div class="c-registro__titulo">
         <label for="titulo">Formulario de registro</label>
       </div>
-        <label class="c-registro__label" for="nombre">Nombre</label>
-        <input class="c-registro__input" id="nombreRegistro" type="text" name="nombreRegistro" placeholder="">
+      <label class="c-registro__label" for="nombre">Nombre</label>
+      <input class="c-registro__input" id="nombreRegistro" type="text" name="nombreRegistro" placeholder="">
       <div>
         <label class="c-registro__label" for="apellido1">Primer apellido</label>
-        <input class="c-registro__input" id="apellido1Registro" type="text" name="apellido1Registro"
-          placeholder="">
+        <input class="c-registro__input" id="apellido1Registro" type="text" name="apellido1Registro" placeholder="">
       </div>
       <div>
         <label class="c-registro__label" for="apellido2">Segundo apellido</label>
-        <input class="c-registro__input" id="apellido2Registro" type="text" name="apellido2Registro"
-        placeholder="">
+        <input class="c-registro__input" id="apellido2Registro" type="text" name="apellido2Registro" placeholder="">
       </div>
       <label class="c-registro__label" for="correoRegistro">Correo electrónico</label>
-      <input class="c-registro__input" id="apellido1Registro" type="text" name="correoRegistro"
-        placeholder="">
+      <input class="c-registro__input" id="apellido1Registro" type="text" name="correoRegistro" placeholder="">
       <div>
         <label class="c-registro__label" for="passwordRegistro">Contraseña</label>
-        <input class="c-registro__input" id="passwordRegistro" type="password" name="passwordRegistro"
-        placeholder="">
+        <input class="c-registro__input" id="passwordRegistro" type="password" name="passwordRegistro" placeholder="">
         </label>
       </div>
       <div>
         <label class="c-registro__label" for="confirmarPasswordRegistro">Confirmar contraseña</label>
-        <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" name="confirmarPasswordRegistro" placeholder="">
+        <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" name="confirmarPasswordRegistro"
+          placeholder="">
       </div>
       <div class="c-registro__presentation">
         <button class="c-button">Confirmar registro</button>
       </div>
     </form>
-  </div>  
+  </div>
 </dialog>
 
 </html>

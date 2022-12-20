@@ -1,6 +1,7 @@
 window.onload = () => {
     document.getElementById("login_icon").onclick = () => mostrarModal("login");
     document.getElementById("cart_icon").onclick = () => mostrarModal("carrito");
+    fadeAnimation();
     addRefreshEvents();
     pintarCategorias();
 };
@@ -46,7 +47,7 @@ function pintarArticulos(id) {
 
     categoryProducts[0].productos.forEach(p => {
         layout.innerHTML += `<div class="c-item">
-                                <div class="c-item__title">${p.nombre.toUpperCase()}</div>
+                                <div class="c-item__title l-flex l-flex--align-items-center l-flex--justify-content-center">${p.nombre.toUpperCase()}</div>
                                 <div id="producto_${p.id}" class="c-item__img"></div>
                                 <div class="c-item__footer l-flex l-flex--align-items-center">
                                     <div class="c-item__icon c-item__icon--left">
@@ -64,5 +65,20 @@ function pintarArticulos(id) {
     for (let img of images) {
         let rutaImg = "url('./assets/img/fotosProductos/" + img.id + ".jpg')";
         img.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0),80%, rgb(227, 219, 206))," + rutaImg;
+    }
+}
+
+function fadeAnimation() {
+    let closeDialogs = document.getElementsByClassName('close');
+    for (const x of closeDialogs) {
+        x.onclick = function() {
+            let dialogo = x.parentNode.parentNode.parentNode;
+            dialogo.classList.add('c-modal--close');
+            dialogo.addEventListener('webkitAnimationEnd', function(){
+                dialogo.classList.remove('c-modal--close');
+                dialogo.close();
+                dialogo.removeEventListener('webkitAnimationEnd',  arguments.callee, false);
+            }, false);
+        };
     }
 }
