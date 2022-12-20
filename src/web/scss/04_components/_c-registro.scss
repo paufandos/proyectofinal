@@ -12,11 +12,11 @@
     border-color: 5px solid #825F4A;
     width: 550px;
     height: 100%;
-    margin: getMargin(3);
+    margin-top: getMargin(3);
     margin-left:getMargin(8);
     margin-right:getMargin(8);
-    padding: getPadding(9);
     margin-bottom: getMargin(6);
+    padding: getPadding(9);
   }
 
   &__titulo {

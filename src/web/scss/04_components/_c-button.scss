@@ -18,9 +18,11 @@
   @include box-shadow(0);
   cursor: pointer;
 
-  &--warning {
+  &--danger-third {
     background-color: transparent;
-    color: getColors("rojo", 4);
+    color: getColors("rojo", 7);
+    border: 0;
+    box-shadow: none;
   }
 
   &--alternativo {

@@ -1006,9 +1006,11 @@ table {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.c-button--warning {
+.c-button--danger-third {
   background-color: transparent;
-  color: #fd3232;
+  color: #930303;
+  border: 0;
+  box-shadow: none;
 }
 .c-button--alternativo {
   background-color: #D6C9B8;
@@ -1054,28 +1056,31 @@ table {
 
 .c-cart {
   font-family: Quicksand, sans-serif;
-  background-color: #FFFFFF;
-  padding: 20px;
+  background-color: #9B7559;
+  padding: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 24px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+  max-width: 796px;
 }
-.c-cart__titulo {
-  font-family: Quicksand, sans-serif;
+.c-cart__title {
   color: #E3DBCE;
-  font-weight: bold;
   font-size: 30px;
+  font-weight: bold;
   text-align: center;
-  padding-top: 16px;
+  padding-top: 10px;
   padding-bottom: 24px;
-  margin: auto;
 }
 .c-cart__head {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr 1.5fr 0.5fr 0.5fr 0.5fr 2fr;
   gap: 16px;
-  color: #823f44;
-  font-weight: 800;
+  color: #E3DBCE;
+  font-size: 16px;
+  font-weight: bold;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #823f44;
@@ -1084,7 +1089,8 @@ table {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr 1.5fr 0.5fr 0.5fr 0.5fr 2fr;
   gap: 16px;
-  color: #3b3b3b;
+  color: #FFFFFF;
+  font-size: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #823f44;
@@ -1093,15 +1099,16 @@ table {
   width: 70px;
 }
 .c-cart__price {
+  color: #E3DBCE;
   font-size: 24px;
-  color: #823f44;
   font-weight: 600;
   margin-top: 20px;
   text-align: right;
 }
 .c-cart__delete-row {
+  color: #E3DBCE;
+  font-size: 16px;
   text-decoration: none;
-  color: #823f44;
   margin-left: 6px;
 }
 .c-cart__footer {
@@ -1115,17 +1122,18 @@ table {
 .c-cart__label {
   color: #FCFCFC;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 800;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
   padding: 10px;
 }
 .c-cart__label--paid {
-  background-color: #01d564;
+  background-color: #E3DBCE;
+  color: #930303;
 }
 .c-cart__label--unpaid {
-  background-color: #fd3232;
+  background-color: #823f44;
 }
 
 .c-footer {
@@ -1453,11 +1461,11 @@ table {
   border-color: 5px solid #825F4A;
   width: 550px;
   height: 100%;
-  margin: 8px;
+  margin-top: 8px;
   margin-left: 24px;
   margin-right: 24px;
-  padding: 32px;
   margin-bottom: 16px;
+  padding: 32px;
 }
 .c-registro__titulo {
   font-family: Quicksand, sans-serif;
@@ -1507,7 +1515,8 @@ table {
   font-size: 30px;
   font-family: Quicksand, sans-serif;
   font-weight: 800;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 .g--background-color-principal-0 {
