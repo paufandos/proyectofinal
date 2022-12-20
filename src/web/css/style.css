@@ -990,7 +990,7 @@ table {
   font-size: 14px;
   font-weight: bold;
   font-family: Quicksand, sans-serif;
-  color: #E8E8E8;
+  color: #F2EFE8;
   background-color: #823f44;
   border-color: #823f44;
   border-style: solid;
@@ -1161,7 +1161,7 @@ table {
   margin: 12px;
 }
 .c-icon--alternativo-2 {
-  color: #E3DBCE;
+  color: #FFFFFF;
   margin-top: 6px;
 }
 .c-icon--close {
@@ -1222,17 +1222,16 @@ table {
 }
 
 .c-login {
-  background-color: #BAA187;
+  background-color: #9B7559;
   padding: 5px;
   border-radius: 8px;
 }
 .c-login__form {
   display: block;
   font-family: Quicksand, sans-serif;
-  background-color: #9B7559;
+  background-color: #D6C9B8;
   border-radius: 8px;
-  border-color: 5px solid #825F4A;
-  width: 350px;
+  width: 450px;
   height: 100%;
   margin: 8px;
   margin-left: 24px;
@@ -1242,16 +1241,16 @@ table {
 }
 .c-login__presentation {
   font-family: Quicksand, sans-serif;
-  color: #823f44;
+  color: #D6C9B8;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 36px;
   text-align: center;
 }
 .c-login__label {
   font-weight: bold;
   font-size: 14px;
   text-align: left;
-  color: #E3DBCE;
+  color: #823f44;
   margin-top: 10px;
   margin-bottom: 32px;
   padding-bottom: 12px;
@@ -1270,15 +1269,25 @@ table {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #619E7A;
-  margin-top: 24px;
+  color: #011907;
+  margin-top: 48px;
 }
 .c-login__link {
   display: block;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
-  color: #F2EFE8;
+  color: #D6C9B8;
+  font-size: 12px;
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
+.c-login__link-2 {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  color: #823f44;
   font-size: 12px;
   margin-bottom: 20px;
 }
@@ -1302,12 +1311,13 @@ table {
   border-width: 0;
   border-radius: 16px;
   padding: 0px;
+  max-width: 1000px;
 }
 .c-modal__content {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #BAA187;
+  background-color: #9B7559;
   padding: 20px;
   border-radius: 8px;
 }
@@ -1334,17 +1344,17 @@ table {
 }
 
 .c-pago {
-  background-color: #BAA187;
+  background-color: getcolos("principal", 1);
   padding: 20px;
   border-radius: 8px;
 }
 .c-pago__form {
   display: block;
   font-family: Quicksand, sans-serif;
-  background-color: #9B7559;
+  background-color: #D6C9B8;
   border-radius: 8px;
-  border-color: 5px solid #825F4A;
-  width: 500px;
+  border-color: 5px solid #9B7559;
+  width: 450px;
   height: 100%;
   margin: 4px;
   margin-left: 20px;
@@ -1354,7 +1364,7 @@ table {
 }
 .c-pago__titulo {
   font-family: Quicksand, sans-serif;
-  color: #E3DBCE;
+  color: #823f44;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -1367,16 +1377,16 @@ table {
   color: #823f44;
   font-weight: bold;
   font-size: 24px;
-  text-align: center;
+  text-align: right;
   margin-top: 40px;
 }
 .c-pago__label {
   font-weight: bold;
   font-size: 14px;
   text-align: left;
-  color: #E3DBCE;
+  color: #823f44;
   margin-top: 16px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   padding-bottom: 12px;
 }
 .c-pago__input {
@@ -1384,7 +1394,7 @@ table {
   color: #823f44;
   display: block;
   height: 35px;
-  margin-top: 4px;
+  margin-top: 8px;
   margin-bottom: 20px;
   padding-left: 12px;
 }
@@ -1398,38 +1408,44 @@ table {
 
 .c-product {
   border-radius: 8px;
-  background-color: #BAA187;
+  background-color: #9B7559;
   font-family: Quicksand, sans-serif;
   padding: 12px;
 }
 .c-product__img {
+  display: block;
   box-sizing: border-box;
-  width: 100%;
   border-radius: 8px;
   object-fit: cover;
+  height: 250px;
 }
 .c-product__informacion {
+  display: block;
   text-align: center;
-  background-color: #9B7559;
-  border: 5px solid;
-  border-color: #825F4A;
+  background-color: #D6C9B8;
   margin: 12px;
   padding: 12px;
-  color: #F4F5F5;
+  color: #823f44;
   box-sizing: border-box;
+  height: 250px;
   border-radius: 8px;
   object-fit: cover;
 }
 .c-product__informacion__titulo {
+  display: block;
+  font-weight: 800;
   font-size: 30px;
   padding: 12px;
   border: none;
 }
 .c-product__informacion__descripcion {
+  display: block;
   padding: 12px;
+  padding-top: 16px;
   border: none;
 }
 .c-product__informacion__precio {
+  display: block;
   font-size: 20px;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
@@ -1456,10 +1472,10 @@ table {
 .c-registro__form {
   display: block;
   font-family: Quicksand, sans-serif;
-  background-color: #9B7559;
+  background-color: #D6C9B8;
   border-radius: 8px;
-  border-color: 5px solid #825F4A;
-  width: 550px;
+  border-color: 5px solid #9B7559;
+  width: 400px;
   height: 100%;
   margin-top: 8px;
   margin-left: 24px;
@@ -1469,7 +1485,7 @@ table {
 }
 .c-registro__titulo {
   font-family: Quicksand, sans-serif;
-  color: #E3DBCE;
+  color: #823f44;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -1482,14 +1498,14 @@ table {
   color: #823f44;
   font-weight: bold;
   font-size: 24px;
-  text-align: center;
+  text-align: right;
   margin-top: 40px;
 }
 .c-registro__label {
   font-weight: bold;
   font-size: 14px;
   text-align: left;
-  color: #E3DBCE;
+  color: #823f44;
   margin-bottom: 4px;
   margin-top: 4px;
 }
@@ -1497,6 +1513,7 @@ table {
   font-size: 14px;
   color: #823f44;
   display: block;
+  width: 100%;
   height: 35px;
   margin-top: 4px;
   margin-bottom: 16px;

@@ -1,14 +1,14 @@
 .c-modal {
   border-width: 0;
   border-radius: getBorderRadius(5);
-
   padding: getPadding(0);
+  max-width: 1000px;
 
   &__content {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: getColors("principal", 3);
+    background-color: getColors("principal", 1);
     padding: getPadding(7);
     border-radius: getBorderRadius(4);
   }

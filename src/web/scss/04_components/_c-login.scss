@@ -1,15 +1,14 @@
 .c-login {
-  background-color: getColors("principal", 3);
+  background-color: getColors("principal", 1);
   padding: 5px;
   border-radius: 8px;
 
   &__form {
     display: block;
     font-family: getFontFamily("principal");
-    background-color: #9B7559;
+    background-color: getColors("principal", 5);
     border-radius: 8px;
-    border-color: 5px solid #825F4A;
-    width: 350px;
+    width: 450px;
     height: 100%;
     margin: getMargin(3);
     margin-left:getMargin(8);
@@ -20,9 +19,9 @@
 
   &__presentation {
     font-family: getFontFamily("principal");
-    color: getColors("principal", 0);
+    color: getColors("principal", 5);
     font-weight: bold;
-    font-size: getFontSize("3xl");
+    font-size: getFontSize("4xl");
     text-align: center;
   }
 
@@ -30,7 +29,7 @@
     font-weight: bold;
     font-size: getFontSize("s");
     text-align: left;
-    color: getColors("principal", 6);
+    color: getColors("principal", 0);
     margin-top: getMargin(4);
     margin-bottom: getMargin(9);
     padding-bottom: getPadding(5);
@@ -51,9 +50,8 @@
     display: block;
     text-align: center;
     text-decoration: none;
-    color: getColors("alternativo", 4);
-    margin-top: getPadding(8);
-    
+    color: getColors("alternativo", 0);
+    margin-top: getPadding(11);
   }
 
   &__link {
@@ -61,7 +59,18 @@
     text-align: center;
     text-decoration: none;
     font-weight: 500;
-    color: getColors("principal", 7);
+    color: getColors("principal", 5);
+    font-size: getFontSize("xs");
+    margin-top: getMargin(8);
+    margin-bottom: getMargin(2);
+  }
+
+  &__link-2 {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: getColors("principal", 0);
     font-size: getFontSize("xs");
     margin-bottom: getMargin(7);
   }

@@ -1,5 +1,5 @@
 .c-pago {
-  background-color: #BAA187;
+  background-color: getcolos("principal", 1);
   padding: 20px;
   border-radius: 8px;
 
@@ -7,10 +7,10 @@
   &__form {
     display: block;
     font-family: getFontFamily("principal");
-    background-color: #9B7559;
+    background-color: getColors("principal", 5);
     border-radius: 8px;
-    border-color: 5px solid #825F4A;
-    width: 500px;
+    border-color: 5px solid getColors("principal", 1);
+    width: 450px;
     height:100%;
     margin: getMargin(1);
     margin-left:getMargin(7);
@@ -22,7 +22,7 @@
 
   &__titulo {
     font-family: getFontFamily("principal");
-    color: getColors("principal", 6);
+    color: getColors("principal", 0);
     font-weight: bold;
     font-size: getFontSize("3xl");
     text-align: center;
@@ -36,7 +36,7 @@
     color: getColors("principal", 0);
     font-weight: bold;
     font-size: getFontSize("2xl");
-    text-align: center;
+    text-align: right;
     margin-top: getMargin(10);
   }
 
@@ -44,9 +44,9 @@
     font-weight: bold;
     font-size: getFontSize("s");
     text-align: left;
-    color: getColors("principal", 6);
+    color: getColors("principal", 0);
     margin-top: getMargin(6);
-    margin-bottom: getMargin(1);
+    margin-bottom: getMargin(3);
     padding-bottom: getPadding(5);
   }
 
@@ -55,10 +55,10 @@
     color: getColors("principal", 0);
     display: block;
     height: 35px;
-    margin-top: getMargin(1);
+    margin-top: getMargin(3);
     margin-bottom: getMargin(7);
     padding-left: getPadding(5);
-   
+
   }
 
   &__contenido {

@@ -55,7 +55,7 @@
 <dialog id="login" class="c-modal">
   <div class="c-modal__content l-flex l-flex--direction-column"> 
     <div class="c-modal__content__icon l-flex--align-self-end">
-        <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.login.close()"></i>
+        <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.login.close()"></i>
     </div>
     <div class="c-login l-flex l-flex--justify-content-center l-flex--align-items-center">
       <form class="c-login__form">
@@ -72,18 +72,17 @@
 
         <div class="c-login__contenido">
           <button class="c-button" type="submit" title="Ingresar" name="Ingresar">Inicia sesión</button><br><br>
-          <a class="c-login__link" href="#">¿Has olvidado tu contraseña?</a>
+          <a class="c-login__link-2" href="#">¿Has olvidado tu contraseña?</a>
         </div>
       </form>
       <div class="c-login__presentation">
         <div>Bienvenido a</div>
         <div>
-          <img src="./assets/img/EducaCafe-1-05.png" style="width: 350px;" alt="educafe_logo">
+          <img src="./assets/img/EducaCafe-2-08.png" style="width: 350px;" alt="educafe_logo">
         </div>
         <div>
           <a class="c-login__link" onclick="window.registro.showModal()" href="#">¿No tienes cuenta? Regístrate</a>
-          <button class="c-button" onclick="window.registro.showModal()">Regístrarse</button>&nbsp;&nbsp;&nbsp;
-          <button class="c-button c-button--alternativo" onclick="window.login.close()">Cancelar</button>
+          <button class="c-button c-button--alternativo" onclick="window.registro.showModal()">Regístrarse</button>
         </div>
       </div>
   </div>
@@ -93,16 +92,17 @@
 <dialog class="c-modal" id="detalleproducto">
   <div class="c-modal__content l-flex l-flex--direction-column"> 
       <div class="c-modal__icon l-flex--align-self-end">
-          <i class="c-icon fa-sharp fa-solid fa-xmark"onclick="window.detalleproducto.close()"></i>
+          <i class="c-icon--close fa-sharp fa-solid fa-xmark"onclick="window.detalleproducto.close()"></i>
       </div>
-      <div class="c-product l-flex l-flex--direction-row l-flex--wrap l-columns l-flex--align-items-center">
+      <div class="c-product l-flex l-flex--justify-content-end l-columns l-flex--align-items-center">
         <img src="assets/img/croissants.png" class="c-product__img">
-        <div class="c-product__informacion l-flex l-flex--direction-column l-flex--justify-items-center">
+        <div class="c-product__informacion">
             <div class=" c-product__informacion__titulo">Croissant</div>
             <div class=" c-product__informacion__descripcion">Desde París con amor. Un clásico de nuestro aparador. Elaborado con largos reposos, ingredientes naturales y mantequilla de la máxima calidad.</div>              
-            <div class=" l-flex l-flex--direction-row l-flex--justify-content-center">
-              <div class="c-product__informacion__precio">0.50€</div>&nbsp;&nbsp;&nbsp;
-              <button class ="c-button"><i class="fa-solid fa-cart-plus"></i>Comprar</button>
+            <div class=" l-flex l-flex--direction-row l-flex l-flex--justify-content-space-between">
+              <div class="c-product__informacion__precio ">0.50 €</div>&nbsp;&nbsp;&nbsp;
+              <div></div>
+              <button class ="c-button"><i class="fa-solid fa-cart-plus">&nbsp;&nbsp;&nbsp;</i>Comprar</button>
             </div>
         </div>
       </div>
@@ -135,8 +135,8 @@
         <div>1</div>
         <div>0.80 €</div>
         <div>
-          <button href="#" class="c-button">+</button> 
-          <button href="#" class="c-button">-</button> 
+          <button href="#" class="c-button">+</button>
+          <button href="#" class="c-button">-</button>
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
@@ -148,8 +148,8 @@
         <div>1</div>
         <div>2.00 €</div>
         <div>
-          <button href="#" class="c-button">+</button> 
-          <button href="#" class="c-button">-</button> 
+          <button href="#" class="c-button">+</button>
+          <button href="#" class="c-button">-</button>
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
@@ -161,8 +161,8 @@
         <div>3</div>
         <div>1.50 €</div>
         <div>
-          <button href="#" class="c-button">+</button> 
-          <button href="#" class="c-button">-</button> 
+          <button href="#" class="c-button">+</button>
+          <button href="#" class="c-button">-</button>
           <a href="#" class="c-cart__delete-row">Eliminar</a>
         </div>
       </div>
@@ -278,22 +278,21 @@
         </div>
 
         <label class="c-pago__label" for="usuario">Nombre de la Tarjeta</label>
-        <input class="c-pago__input" id="nombreTarjeta" type="text" size="45" name="nombreTarjeta"
+        <input class="c-pago__input" id="nombreTarjeta" type="text" size="47" name="nombreTarjeta"
           placeholder="Tal y como aparece en la tarjeta">
         <label class="c-pago__label" for="numeroTarjeta">Número de la Tarjeta</label>
-        <input class="c-pago__input" id="numeroTarjeta" type="password" size="45" name="numeroTarjeta"
+        <input class="c-pago__input" id="numeroTarjeta" type="password" size="47" name="numeroTarjeta"
           placeholder="Números sin separaciones">
 
         <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-space-between">
           <label class="c-pago__label" for="fecha">Fecha de expiración de la Tarjeta</label>
           <label class="c-pago__label" for="codigoSeguridad">Código de seguridad</label>
         </div>
-
         <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
           <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
             <input class="c-pago__input" id="mesTarjeta" type="text" maxlength="2" size="4" name="mesTarjeta"
             placeholder="MM">&nbsp;&nbsp;&nbsp;
-          <input class="c-pago__input" id="anyoTarjeta" type="text" maxlength="2" size="4" name="anyoTarjeta"
+            <input class="c-pago__input" id="anyoTarjeta" type="text" maxlength="2" size="4" name="anyoTarjeta"
             placeholder="YY">
           </div>
           <input class="c-pago__input" id="codigoSeguridad" type="text" maxlength="3" size="6" name="codigoSeguridad"
@@ -309,8 +308,7 @@
           <i class="fa-brands fa-cc-amazon-pay fa-3x"></i>
         </div>
         <div class="c-pago__presentation">
-          <button class="c-button">Confirmar pago</button>&nbsp;&nbsp;&nbsp;
-          <button class="c-button c-button--alternativo" onclick="window.pago.close()">Cerrar</button>
+          <button class="c-button">Confirmar pago</button>
         </div>
       </form>
     </div>
@@ -327,39 +325,33 @@
       <div class="c-registro__titulo">
         <label for="titulo">Formulario de registro</label>
       </div>
-      <label class="c-registro__label" for="nombre">Nombre</label>
-      <input class="c-registro__input" id="nombreRegistro" type="text" size="25" name="nombreRegistro" placeholder="">
-      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-center">
+        <label class="c-registro__label" for="nombre">Nombre</label>
+        <input class="c-registro__input" id="nombreRegistro" type="text" name="nombreRegistro" placeholder="">
+      <div>
         <label class="c-registro__label" for="apellido1">Primer apellido</label>
-        <label class="c-registro__label" for="apellido2">Segundo apellido
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input class="c-registro__input" id="apellido1Registro" type="text" name="apellido1Registro"
+          placeholder="">
       </div>
-      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
-        <input class="c-registro__input" id="apellido1Registro" type="text" size="25" name="apellido1Registro"
-        placeholder="">&nbsp;&nbsp;&nbsp;
-      <input class="c-registro__input" id="apellido2Registro" type="text" size="25" name="apellido2Registro"
+      <div>
+        <label class="c-registro__label" for="apellido2">Segundo apellido</label>
+        <input class="c-registro__input" id="apellido2Registro" type="text" name="apellido2Registro"
         placeholder="">
       </div>
-      <div class="c-registro__label">&nbsp;</div>
       <label class="c-registro__label" for="correoRegistro">Correo electrónico</label>
-      <input class="c-registro__input" id="apellido1Registro" type="text" size="25" name="correoRegistro"
+      <input class="c-registro__input" id="apellido1Registro" type="text" name="correoRegistro"
         placeholder="">
-      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-start">
+      <div>
         <label class="c-registro__label" for="passwordRegistro">Contraseña</label>
-        <label class="c-registro__label" for="confirmarPasswordRegistro">Confirmar contraseña
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input class="c-registro__input" id="passwordRegistro" type="password" name="passwordRegistro"
+        placeholder="">
         </label>
       </div>
-      <div class="l-flex l-flex--justify-content-space-between l-flex--align-items-center">
-        <input class="c-registro__input" id="passwordRegistro" type="password" size="25" name="passwordRegistro"
-        placeholder="">
-        <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" size="25"
-        name="confirmarPasswordRegistro" placeholder="">
+      <div>
+        <label class="c-registro__label" for="confirmarPasswordRegistro">Confirmar contraseña</label>
+        <input class="c-registro__input" id="confirmarPasswordRegistro" type="password" name="confirmarPasswordRegistro" placeholder="">
       </div>
       <div class="c-registro__presentation">
-        <button class="c-button">Confirmar registro</button>&nbsp;&nbsp;&nbsp;
-        <button class="c-button c-button--alternativo" onclick="window.registro.close()">Cancelar</button>
+        <button class="c-button">Confirmar registro</button>
       </div>
     </form>
   </div>

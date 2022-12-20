@@ -1,5 +1,5 @@
 .c-registro {
-  background-color: #BAA187;
+  background-color:getColors("principal", 3);
   padding: 20px;
   border-radius: 8px;
 
@@ -7,10 +7,10 @@
   &__form {
     display: block;
     font-family: getFontFamily("principal");
-    background-color: #9B7559;
+    background-color: getColors("principal", 5);
     border-radius: 8px;
-    border-color: 5px solid #825F4A;
-    width: 550px;
+    border-color: 5px solid getColors("principal", 1);
+    width: 400px;
     height: 100%;
     margin-top: getMargin(3);
     margin-left:getMargin(8);
@@ -21,7 +21,7 @@
 
   &__titulo {
     font-family: getFontFamily("principal");
-    color: getColors("principal", 6);
+    color: getColors("principal", 0);
     font-weight: bold;
     font-size: getFontSize("3xl");
     text-align: center;
@@ -35,7 +35,7 @@
     color: getColors("principal", 0);
     font-weight: bold;
     font-size: getFontSize("2xl");
-    text-align: center;
+    text-align: right;
     margin-top: getMargin(10);
   }
 
@@ -43,16 +43,16 @@
     font-weight: bold;
     font-size: getFontSize("s");
     text-align: left;
-    color: getColors("principal", 6);
+    color: getColors("principal", 0);
     margin-bottom: getMargin(1);
     margin-top: getMargin(1);
-
   }
 
   &__input {
     font-size: getFontSize("s");
     color: getColors("principal", 0);
     display: block;
+    width: 100%;
     height: 35px;
     margin-top: getMargin(1);
     margin-bottom: getMargin(6);

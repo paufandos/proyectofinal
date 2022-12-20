@@ -1,51 +1,51 @@
 .c-product{
     border-radius: getBorderRadius(4);
-    background-color: getColors("principal",3);
+    background-color: getColors("principal",1);
     font-family: getFontFamily("principal");
     padding:getPadding(5);
-    
+
 &__img {
+    display: block;
     box-sizing: border-box;
-    width: 100%;
     border-radius: getBorderRadius(4);
     object-fit: cover;
+    height: 250px;
 }
 
 &__informacion{
-    text-align: center; 
-    background-color: #9B7559;
-    border:5px solid ;
-    border-color: #825F4A;
+    display: block;
+    text-align: center;
+    background-color:getColors("principal",5);
     margin: getMargin(5);
     padding:getPadding(5);
-   
-    color: getColors("blanco",3);
+    color: getColors("principal",0);
     box-sizing: border-box;
-    
+    height: 250px;
 
     border-radius: getBorderRadius(4);
     object-fit: cover;
- 
+
     &__titulo{
+        display: block;
+        font-weight: 800;
         font-size: getFontSize("3xl");
         padding:getPadding(5);
         border:none;
     }
 
     &__descripcion{
+        display: block;
         padding:getPadding(5);
+        padding-top: getPadding(6);
         border:none;
     }
     &__precio{
+        display: block;
         font-size: getFontSize("xl");
         font-weight: 700;
         font-family: getFontFamily("alternativo");
         padding:getPadding(5);
-       
     }
- 
-
-    
 }
 
 
