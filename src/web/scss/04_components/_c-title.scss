@@ -1,7 +1,21 @@
-.c-title{
-    color: getColors("principal",0);
-    font-size: getFontSize("3xl");
+.c-title {
     font-family: getFontFamily("principal");
+    font-size: getFontSize("3xl");
     font-weight: 800;
-    margin-bottom: getMargin(8);
+    text-align: center;
+
+    color: getColors("principal", 0);
+
+    &--alternativo{
+        color: getColors("principal", 5);
+    }
+
+    &--alternativo-secundario{
+        font-family: getFontFamily("alternativo");
+        color: getColors("principal", 7);
+    }
+
+    &--medium{
+        font-size: getFontSize("2xl");
+    }
 }

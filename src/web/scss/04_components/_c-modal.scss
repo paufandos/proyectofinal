@@ -1,20 +1,16 @@
 .c-modal {
   border-width: 0;
-  border-radius: getBorderRadius(5);
-  padding: getPadding(0);
-  max-width: 1000px;
+  border-radius: getBorderRadius(4);
+  background-color: getColors("principal", 1);
 
-  &__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: getColors("principal", 1);
-    padding: getPadding(7);
-    border-radius: getBorderRadius(4);
+  padding: getPadding(8);
+
+  &--fit-content {
+    width: fit-content;
   }
 
   &--xsmall {
-    width: 30vw;
+    width: 35vw;
   }
 
   &--small {

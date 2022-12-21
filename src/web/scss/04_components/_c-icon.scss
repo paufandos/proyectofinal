@@ -16,8 +16,24 @@
 
     &--close {
         color: getColors("principal", 0);
-        margin-left: getMargin(6);
         font-size: getFontSize("2xl");
         cursor: pointer;
+
+        &:hover{
+            color: #541C24;
+        }
+
+        &-light{
+            color: getColors("principal", 6);
+
+            &:hover{
+                color: getColors("principal", 4);
+            }
+        }
+    }
+
+    &--small{
+        margin: getMargin(2);
+        font-size: getFontSize("xl");
     }
 }

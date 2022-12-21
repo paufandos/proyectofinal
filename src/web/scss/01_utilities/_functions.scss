@@ -76,6 +76,7 @@
   @return map-keys($font-size);
 }
 
+
 //FONT-FAMILY
 @function getFontFamily($clave) {
   @return unquote(map-get($font-family, $clave));
@@ -116,6 +117,7 @@
 
   @return $arrayKeys;
 }
+
 
 //BACKGROUND IMAGES
 @function getBackgroundImage($clave) {
