@@ -1309,7 +1309,7 @@ table {
 .c-main {
   background-image: url("../assets/img/pattern-02.jpg");
   background-repeat: repeat;
-  padding-top: 64px;
+  padding-top: 128px;
   padding-bottom: 64px;
   padding-left: 64px;
   padding-right: 64px;
@@ -1373,6 +1373,8 @@ table {
 }
 
 .c-nav {
+  position: fixed;
+  width: 100%;
   background-color: #D6C9B8;
 }
 .c-nav__item {

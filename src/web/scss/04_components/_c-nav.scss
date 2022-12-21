@@ -1,4 +1,6 @@
 .c-nav {
+    position: fixed;
+    width: 100%;
     background-color: getColors("principal", 5);
 
     &__item {
