@@ -13,11 +13,11 @@ let modals = [
                     <label class="c-label" for="usuario">Usuario</label>
                     <input id="usuario" class="c-input c-input--w-100" name="usuario" type="text"
                         placeholder="Escribe aquí tu nombre de usuario">
-                
+
                     <label class="c-label" for="password">Contraseña</label>
                     <input id="password" class="c-input c-input--w-100" name="password" type="password"
                         placeholder="Escribe aquí tu contraseña">
-                
+
                     <div class="g--text-align-center">
                         <button class="c-button g--margin-top-10" type="submit">Inicia sesión</button><br>
                         <button class="c-button c-button--principal-terciario g--margin-top-2">¿Has olvidado tu contraseña?</button>

@@ -1,7 +1,7 @@
-let datos = [
     {
+    "productos": [{
         "nombre":"cafes",
-        "productos": [
+        "articulos": [
             {
                 "id": "1",
                 "nombre": "café solo",
@@ -51,11 +51,11 @@ let datos = [
                 "precio": 1.2
             }
         ]
-    },
+        },
 
-    {
+        {
         "nombre":"bebidas",
-        "productos": [
+        "articulos": [
             {
                 "id": "9",
                 "nombre": "Coca-cola",
@@ -129,11 +129,11 @@ let datos = [
                 "precio": 1.2
             }
         ]
-    },
+        },
 
-    {
+        {
         "nombre":"bocadillos",
-        "productos": [
+        "articulos": [
             {
                 "id": "21",
                 "nombre": "Bocadillo pequeño",
@@ -159,11 +159,11 @@ let datos = [
                 "precio": 1.2
             }
         ]
-    },
+        },
 
-    {
+        {
         "nombre":"dulces",
-        "productos": [
+        "articulos": [
             {
                 "id": "25",
                 "nombre": "Caracolas",
@@ -189,11 +189,11 @@ let datos = [
                 "precio": 1.5
             }
         ]
-    },
+        },
 
-    {
+        {
         "nombre":"salados",
-        "productos": [
+        "articulos": [
             {
                 "id": "29",
                 "nombre": "Empanadilla de pisto",
@@ -219,11 +219,11 @@ let datos = [
                 "precio": 1.5
             }
         ]
-    },
+        },
 
-    {
+        {
         "nombre":"snacks",
-        "productos": [
+        "articulos": [
             {
                 "id": "33",
                 "nombre": "Mikado",
@@ -272,8 +272,17 @@ let datos = [
                 "descripcion": "",
                 "precio": 0.5
             }
-
-
-
         ]
-    }]
+        }],
+    "usuario": [
+        { "nombre": "root" , "contraseña": "root"},
+        { "nombre": "javier" , "contraseña": "root"},
+        { "nombre": "pau" , "contraseña": "root" },
+        { "nombre": "elena" , "contraseña": "root"},
+        { "nombre": "yasmina" , "contraseña": "root"},
+        { "nombre": "joseluis" , "contraseña": "root"}
+
+    ]
+
+
+    }
