@@ -36,7 +36,7 @@ function mostrarCategorias() {
     //
     let cartas = layout.getElementsByClassName("c-card");
     Array.from(cartas).forEach(c => {
-        c.onclick = () => mostrarArticulos(c.id);
+        c.onclick = () => mostrarProductos(c.id);
     });
     })
     //catch de la promesa
@@ -46,22 +46,22 @@ function mostrarCategorias() {
     
 }
 
-function mostrarArticulos(id) {
+function mostrarProductos(id) {
     //declaracion de parametros que pasaremos al request
-    const parametro = "categorias";
+    const parametro = "productos";
     const method = "get";
 
     request(method, parametro, null)
     //resolve de la promesa
-    .then(listadoCategorias=>{
+    .then(listadoProductos=>{
         let main = document.getElementById("main");
         main.classList = "c-main c-main--background-dark"
         main.innerHTML = `<div id="products" class="c-products"></div>`;
-    
+
         let layout = document.getElementById("products");
-        let articulosCategoria = JSON.parse(listadoCategorias).find(c => c.id == id);
-    
-        articulosCategoria.articulos.forEach(p => {
+        let productosCategoriaSeleccionada = JSON.parse(listadoProductos).filter(p => p.id_categoria == id);
+
+        productosCategoriaSeleccionada.forEach(p => {
             layout.innerHTML += `<div class="c-item">
                                     <div class="c-item__title l-flex l-flex--align-items-center l-flex--justify-content-center">${p.nombre.toUpperCase()}</div>
                                     <div id="${p.id}" class="c-item__img"></div>
@@ -85,7 +85,7 @@ function mostrarArticulos(id) {
     
         let infoIcon = layout.getElementsByClassName("fa-circle-info");
         for (let icon of infoIcon) {
-            icon.onclick = () => mostrarDetalleProducto(id, icon.id)
+            icon.onclick = () => mostrarDetalleProducto(icon.id)
         }
     })
     
@@ -182,31 +182,31 @@ function modalDetalleCarrito() {
     dialog.showModal();
 }
 
-function mostrarDetalleProducto(idCategoria, idArticulo) {
+function mostrarDetalleProducto(idProducto) {
     let dialog = document.getElementById("dialog");
     dialog.close();
 
     //declaracion de parametros que pasaremos al request
-    const parametro = "categorias";
+    const parametro = "productos";
     const method = "get";
+    console.log(idProducto)
 
     //promesa para pintar las categorias
     request(method, parametro, null)
     //resolve de la promesa
-    .then(listadoCategorias=>{
-        let categoria = JSON.parse(listadoCategorias).find(c=> c.id == idCategoria);
-        let articulo = categoria.articulos.find(a=> a.id == idArticulo);
+    .then(listadoProductos=>{
+        let articulo = JSON.parse(listadoProductos).find(p=> p.id == idProducto);
 
-        dialog.classList = "c-modal c-modal--large detalleProductoModal";
+        dialog.classList = "c-modal c-modal--small detalleProductoModal";
         dialog.innerHTML = `<div class="c-bubble">
             <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between g--margin-bottom-5">
             <div class="c-title">${articulo.nombre}</div>
             <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
             </div>
-            <div class="l-columns">
-            <img src="assets/img/fotosProductos/producto_${articulo.id}.jpg" class="c-img c-img--big">
+            <div class="l-flex l-flex--justify-content-center">
+            <img src="assets/img/fotosProductos/producto_${articulo.id}.jpg" class="c-img c-img--small">
             <div
-                class="c-bubble c-bubble--dark g--margin-5 l-flex l-flex--direction-column l-flex--justify-content-space-between">
+                class="c-bubble c-bubble--dark g--margin-horizontal-5 l-flex l-flex--direction-column l-flex--justify-content-space-between">
                 <div class="c-text">${articulo.descripcion}</div>
                 <div class="l-flex l-flex--justify-content-space-between">
                 <div class="c-title c-title--alternativo-secundario c-title--medium">${articulo.precio} €</div>
