@@ -16,16 +16,17 @@ function addRefreshEvents() {
 }
 
 function mostrarCategorias() {
+    let main = document.getElementById("main");
+    main.innerHTML = `<div id="categorias" class="l-columns-3"></div>`;
+    let layout = document.getElementById("categorias");
+
     //declaracion de parametros que pasaremos al request
     const parametro = "categorias";
     const method = "get";
 
-    //promesa para pintar las categorias
     request(method, parametro, null)
     //resolve de la promesa
-    .then(listadoCategorias=>{let main = document.getElementById("main");
-    main.innerHTML = `<div id="categorias" class="l-columns-3"></div>`;
-    let layout = document.getElementById("categorias");
+    .then(listadoCategorias=>{
     
     JSON.parse(listadoCategorias).forEach(cat => {
         layout.innerHTML += `<div id="${cat.id}" class="c-card">
@@ -47,6 +48,11 @@ function mostrarCategorias() {
 }
 
 function mostrarProductos(id) {
+    let main = document.getElementById("main");
+    main.classList = "c-main c-main--background-dark"
+    main.innerHTML = `<div id="products" class="c-products"></div>`;
+    let layout = document.getElementById("products");
+
     //declaracion de parametros que pasaremos al request
     const parametro = "productos";
     const method = "get";
@@ -54,11 +60,6 @@ function mostrarProductos(id) {
     request(method, parametro, null)
     //resolve de la promesa
     .then(listadoProductos=>{
-        let main = document.getElementById("main");
-        main.classList = "c-main c-main--background-dark"
-        main.innerHTML = `<div id="products" class="c-products"></div>`;
-
-        let layout = document.getElementById("products");
         let productosCategoriaSeleccionada = JSON.parse(listadoProductos).filter(p => p.id_categoria == id);
 
         productosCategoriaSeleccionada.forEach(p => {
@@ -196,7 +197,7 @@ function mostrarDetalleProducto(idProducto) {
                 class="c-bubble c-bubble--dark g--margin-horizontal-5 l-flex l-flex--direction-column l-flex--justify-content-space-between">
                 <div class="c-text">${articulo.descripcion}</div>
                 <div class="l-flex l-flex--justify-content-space-between">
-                <div class="c-title c-title--alternativo-secundario c-title--medium">${articulo.precio} €</div>
+                <div class="c-title c-title--alternativo-secundario c-title--medium">${articulo.precio.toFixed(2)} €</div>
                 <button class="c-button"><i class="fa-solid fa-cart-plus g--margin-right-4"></i>Añadir</button>
                 </div>
             </div>
