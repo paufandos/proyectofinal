@@ -1163,11 +1163,6 @@ table {
   width: 70px;
   object-fit: cover;
 }
-.c-cart-row__footer {
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
 
 .c-footer {
   text-align: center;

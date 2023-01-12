@@ -176,8 +176,8 @@ let modals = [
                 </div>
             
                 <div class="c-cart-row__footer l-flex l-flex--align-items-center l-flex--justify-content-space-between">
-                <div class="c-title">Total: 4.30 €</div>
-                <button id="pago" class="c-button">Confirmar carrito</button>
+                    <div class="c-title">Total: 4.30 €</div>
+                    <button id="pago" class="c-button">Confirmar carrito</button>
                 </div>
             </div>`
     },
@@ -217,7 +217,7 @@ let modals = [
             </div>`
     },
     {
-        id: "detalleCarritoHistorial",
+        id: "detalleCarrito",
         tamanyo: "c-modal--large",
         code: `<div class="c-bubble">
                     <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between g--margin-bottom-5">
@@ -240,8 +240,7 @@ let modals = [
                     <div>0.80 €</div>
                     <div>1</div>
                     <div>0.80 €</div>
-                    <div>
-                    </div>
+                    <div></div>
                 </div>
                 <div class="c-cart-row">
                     <img src="./assets/img/fotosProductos/producto_22.jpg" class="c-cart-row__img">
@@ -250,11 +249,7 @@ let modals = [
                     <div>2.00 €</div>
                     <div>1</div>
                     <div>2.00 €</div>
-                    <div>
-                        <button class="c-button">+</button>
-                        <button class="c-button">-</button>
-                        <button class="c-button c-button--terciario">Eliminar</button>
-                    </div>
+                    <div></div>
                 </div>
                 <div class="c-cart-row">
                     <img class="c-cart-row__img" src="./assets/img/bocadillos.jpg">
@@ -263,16 +258,16 @@ let modals = [
                     <div>0.50 €</div>
                     <div>3</div>
                     <div>1.50 €</div>
-                    <div>
-                        <button class="c-button">+</button>
-                        <button class="c-button">-</button>
-                        <button class="c-button c-button--terciario">Eliminar</button>
-                    </div>
+                    <div></div>
                 </div>
             
-                <div class="c-cart-row__footer l-flex l-flex--align-items-center l-flex--justify-content-space-between">
+                <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between g--margin-vertical-8">
                     <div class="c-title">Total: 4.30 €</div>
-                    <button id="pago" class="c-button">Confirmar carrito</button>
+                    <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between">
+                        <div class="c-cart-list__item"><button class="c-button">Pagar</button></div>
+                        <div class="c-cart-list__item"><button class="c-button">Recuperar</button></div>
+                        <div class="c-cart-list__item"><button class="c-button c-button--danger">Borrar</button></div>
+                    </div>
                 </div>
             </div>`
     }
