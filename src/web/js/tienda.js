@@ -1,10 +1,25 @@
+let carrito;
+
 window.onload = () => {
+    carrito = new Carrito(new Date());
     document.getElementById("login_icon").onclick = modalLogin;
-    document.getElementById("cart_icon").onclick = modalCarrito;
+    document.getElementById("cart_icon").onclick = verCarrito;
     document.getElementById("cart-list_icon").onclick = modalHistorialCarrito;
     addRefreshEvents();
     mostrarCategorias();
 };
+
+function verCarrito() {
+    carrito.actualizarCarrito();
+}
+
+function ponArticuloEnCarrito() {
+    console.log(this.id)
+    let articulo = datos.find(e => e.codigo == this.id);
+    carrito.anyadeArticulo(articulo);
+    console.log(articulo)
+
+}
 
 function addRefreshEvents() {
     let refreshElements = document.getElementsByClassName("refresh");
@@ -22,28 +37,29 @@ function mostrarCategorias() {
 
     //promesa para pintar las categorias
     request(method, parametro, null)
-    //resolve de la promesa
-    .then(listadoCategorias=>{let main = document.getElementById("main");
-    main.innerHTML = `<div id="categorias" class="l-columns-3"></div>`;
-    let layout = document.getElementById("categorias");
-    
-    JSON.parse(listadoCategorias).forEach(cat => {
-        layout.innerHTML += `<div id="${cat.id}" class="c-card">
+        //resolve de la promesa
+        .then(listadoCategorias => {
+            let main = document.getElementById("main");
+            main.innerHTML = `<div id="categorias" class="l-columns-3"></div>`;
+            let layout = document.getElementById("categorias");
+
+            JSON.parse(listadoCategorias).forEach(cat => {
+                layout.innerHTML += `<div id="${cat.id}" class="c-card">
                                 <div class="c-card__nombre">${cat.nombre.toUpperCase()}</div>
                                 <img src="./assets/img/${cat.nombre}.jpg" class="c-card__imagen" alt="${cat.nombre}" />
                             </div>`;
-    });
-    //
-    let cartas = layout.getElementsByClassName("c-card");
-    Array.from(cartas).forEach(c => {
-        c.onclick = () => mostrarArticulos(c.id);
-    });
-    })
-    //catch de la promesa
-    .catch(error=>{
-        console.log("Error");
-    });
-    
+            });
+            //
+            let cartas = layout.getElementsByClassName("c-card");
+            Array.from(cartas).forEach(c => {
+                c.onclick = () => mostrarArticulos(c.id);
+            });
+        })
+        //catch de la promesa
+        .catch(error => {
+            console.log("Error");
+        });
+
 }
 
 function mostrarArticulos(id) {
@@ -52,17 +68,17 @@ function mostrarArticulos(id) {
     const method = "get";
 
     request(method, parametro, null)
-    //resolve de la promesa
-    .then(listadoCategorias=>{
-        let main = document.getElementById("main");
-        main.classList = "c-main c-main--background-dark"
-        main.innerHTML = `<div id="products" class="c-products"></div>`;
-    
-        let layout = document.getElementById("products");
-        let articulosCategoria = JSON.parse(listadoCategorias).find(c => c.id == id);
-    
-        articulosCategoria.articulos.forEach(p => {
-            layout.innerHTML += `<div class="c-item">
+        //resolve de la promesa
+        .then(listadoCategorias => {
+            let main = document.getElementById("main");
+            main.classList = "c-main c-main--background-dark"
+            main.innerHTML = `<div id="products" class="c-products"></div>`;
+
+            let layout = document.getElementById("products");
+            let articulosCategoria = JSON.parse(listadoCategorias).find(c => c.id == id);
+
+            articulosCategoria.articulos.forEach(p => {
+                layout.innerHTML += `<div class="c-item">
                                     <div class="c-item__title l-flex l-flex--align-items-center l-flex--justify-content-center">${p.nombre.toUpperCase()}</div>
                                     <div id="${p.id}" class="c-item__img"></div>
                                     <div class="c-item__footer l-flex l-flex--align-items-center">
@@ -74,35 +90,46 @@ function mostrarArticulos(id) {
                                             <i class="c-icon c-icon--alternativo fa-solid fa-cart-plus" ></i>
                                         </div>
                                     </div>
-                                </div>`;
-        });
-    
-        let images = layout.getElementsByClassName("c-item__img");
-        for (let img of images) {
-            let rutaImg = "url('./assets/img/fotosProductos/producto_" + img.id + ".jpg')";
-            img.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0),80%, rgb(227, 219, 206))," + rutaImg;
-        }
-    
-        let infoIcon = layout.getElementsByClassName("fa-circle-info");
-        for (let icon of infoIcon) {
-            icon.onclick = () => mostrarDetalleProducto(id, icon.id)
-        }
-    })
-    
-    
+                                    <div class="c-item__price">${p.precio.toFixed(2)} €</div>
+                                    <div class="c-item__icon c-item__icon--right">
+                                        <i id="producto-${p.id}" class="c-icon c-icon--alternativo fa-solid fa-cart-plus" ></i>
+                                    </div>
+                                </div>
+                            </div>`;
+            });
+
+            let images = layout.getElementsByClassName("c-item__img");
+            for (let img of images) {
+                let rutaImg = "url('./assets/img/fotosProductos/" + img.id + ".jpg')";
+                img.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0),80%, rgb(227, 219, 206))," + rutaImg;
+            }
+
+            let infoIcon = layout.getElementsByClassName("fa-circle-info");
+            for (let icon of infoIcon) {
+                icon.addEventListener('click', modalDetalleProducto)
+            }
+
+            let articulos = layout.getElementsByClassName("fa-cart-plus");
+            for (let art of articulos) {
+                console.log(art.id)
+                let id = art.id.split("-")[1];
+
+                art.addEventListener('click', () => { ponArticuloEnCarrito() });
+            };
+        })
 }
 
 function fadeAnimation(modalId) {
     let modal = document.getElementsByClassName(modalId);
     let close = modal[0].getElementsByClassName("close");
-    close[0].onclick = function() {
-            modal[0].classList.add('c-modal--close');
-            modal[0].addEventListener('webkitAnimationEnd', function(){
-                modal[0].classList.remove('c-modal--close');
-                modal[0].close();
-                modal[0].removeEventListener('webkitAnimationEnd',  arguments.callee, false);
-            }, false);
-        };
+    close[0].onclick = function () {
+        modal[0].classList.add('c-modal--close');
+        modal[0].addEventListener('webkitAnimationEnd', function () {
+            modal[0].classList.remove('c-modal--close');
+            modal[0].close();
+            modal[0].removeEventListener('webkitAnimationEnd', arguments.callee, false);
+        }, false);
+    };
 }
 
 function modalLogin() {
@@ -130,18 +157,6 @@ function modalRegistro() {
     dialog.showModal();
 }
 
-function modalCarrito() {
-    let dialog = document.getElementById("dialog");
-    dialog.close();
-    let modal = modals.find(m => m.id == "carrito");
-
-    dialog.classList = "c-modal " + modal.tamanyo + " carritoModal";
-    dialog.innerHTML = modal.code;
-
-    fadeAnimation("carritoModal");
-    document.getElementById("pago").onclick = modalPago;
-    dialog.showModal();
-}
 
 function modalPago() {
     let dialog = document.getElementById("dialog");
@@ -179,13 +194,13 @@ function mostrarDetalleProducto(idCategoria, idArticulo) {
 
     //promesa para pintar las categorias
     request(method, parametro, null)
-    //resolve de la promesa
-    .then(listadoCategorias=>{
-        let categoria = JSON.parse(listadoCategorias).find(c=> c.id == idCategoria);
-        let articulo = categoria.articulos.find(a=> a.id == idArticulo);
+        //resolve de la promesa
+        .then(listadoCategorias => {
+            let categoria = JSON.parse(listadoCategorias).find(c => c.id == idCategoria);
+            let articulo = categoria.articulos.find(a => a.id == idArticulo);
 
-        dialog.classList = "c-modal c-modal--large detalleProductoModal";
-        dialog.innerHTML = `<div class="c-bubble">
+            dialog.classList = "c-modal c-modal--large detalleProductoModal";
+            dialog.innerHTML = `<div class="c-bubble">
             <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between g--margin-bottom-5">
             <div class="c-title">${articulo.nombre}</div>
             <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
@@ -202,37 +217,38 @@ function mostrarDetalleProducto(idCategoria, idArticulo) {
             </div>
             </div>
         </div>`;
-        fadeAnimation("detalleProductoModal");
-        dialog.showModal();
-    })
-    .catch(error=>{
-        console.log("Error")});
+            fadeAnimation("detalleProductoModal");
+            dialog.showModal();
+        })
+        .catch(error => {
+            console.log("Error")
+        });
 }
 
-function request(method, parametro, body=null) {
+function request(method, parametro, body = null) {
 
-    return new Promise((resolve,reject) => {
+    return new Promise((resolve, reject) => {
 
         let xhr = new XMLHttpRequest();
 
-            xhr.open(method, `http://localhost:3000/${parametro}`);
+        xhr.open(method, `http://localhost:3000/${parametro}`);
 
-            xhr.setRequestHeader("Content-type", "application/Json;charset=utf-8");
+        xhr.setRequestHeader("Content-type", "application/Json;charset=utf-8");
 
-            xhr.response = "JSON";
-   
-            xhr.send();
-    
-            xhr.onload =  () => {
-                
-                if (xhr.status == 200) {
-                    resolve(xhr.response);                    
-                } else {
-                    reject(console.log("ERROR " + xhr.status + " " + xhr.statusText));
-                }   
+        xhr.response = "JSON";
+
+        xhr.send();
+
+        xhr.onload = () => {
+
+            if (xhr.status == 200) {
+                resolve(xhr.response);
+            } else {
+                reject(console.log("ERROR " + xhr.status + " " + xhr.statusText));
             }
-        }      
+        }
+    }
 
     )
-        
+
 };
