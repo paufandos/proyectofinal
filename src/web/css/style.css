@@ -1004,7 +1004,7 @@ table {
 }
 .c-bubble--dark {
   background-color: #9B7559;
-  height: 100%;
+  width: 100%;
 }
 
 .c-button {
@@ -1224,6 +1224,9 @@ table {
 }
 .c-img--big {
   width: 450px;
+}
+.c-img--small {
+  width: 250px;
 }
 
 .c-input {
