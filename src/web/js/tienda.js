@@ -3,7 +3,7 @@ window.onload = () => {
     document.getElementById("cart_icon").onclick = modalCarrito;
     document.getElementById("cart-list_icon").onclick = modalHistorialCarrito;
     addRefreshEvents();
-    pintarCategorias();
+    mostrarCategorias();
 };
 
 function addRefreshEvents() {
@@ -15,58 +15,81 @@ function addRefreshEvents() {
     }
 }
 
-function pintarCategorias() {
-    let main = document.getElementById("main");
+function mostrarCategorias() {
+    //declaracion de parametros que pasaremos al request
+    const parametro = "categorias";
+    const method = "get";
+
+    //promesa para pintar las categorias
+    request(method, parametro, null)
+    //resolve de la promesa
+    .then(listadoCategorias=>{let main = document.getElementById("main");
     main.innerHTML = `<div id="categorias" class="l-columns-3"></div>`;
     let layout = document.getElementById("categorias");
-    datos.forEach(cat => {
-        layout.innerHTML += `<div id="cat-${cat.nombre}" class="c-card">
+    
+    JSON.parse(listadoCategorias).forEach(cat => {
+        layout.innerHTML += `<div id="${cat.id}" class="c-card">
                                 <div class="c-card__nombre">${cat.nombre.toUpperCase()}</div>
                                 <img src="./assets/img/${cat.nombre}.jpg" class="c-card__imagen" alt="${cat.nombre}" />
                             </div>`;
     });
-
+    //
     let cartas = layout.getElementsByClassName("c-card");
     Array.from(cartas).forEach(c => {
-        c.onclick = () => pintarArticulos(c.id);
+        c.onclick = () => mostrarArticulos(c.id);
     });
+    })
+    //catch de la promesa
+    .catch(error=>{
+        console.log("Error");
+    });
+    
 }
 
-function pintarArticulos(id) {
-    let main = document.getElementById("main");
-    main.classList = "c-main c-main--background-dark"
-    main.innerHTML = `<div id="products" class="c-products"></div>`;
+function mostrarArticulos(id) {
+    //declaracion de parametros que pasaremos al request
+    const parametro = "categorias";
+    const method = "get";
 
-    let layout = document.getElementById("products");
-    let categoriaId = id.split("-", id.id);
-    let categoryProducts = datos.filter(c => c.nombre == categoriaId[1]);
-
-    categoryProducts[0].productos.forEach(p => {
-        layout.innerHTML += `<div class="c-item">
-                                <div class="c-item__title l-flex l-flex--align-items-center l-flex--justify-content-center">${p.nombre.toUpperCase()}</div>
-                                <div id="producto_${p.id}" class="c-item__img"></div>
-                                <div class="c-item__footer l-flex l-flex--align-items-center">
-                                    <div class="c-item__icon c-item__icon--left">
-                                        <i id="producto-${p.id}" class="c-icon fa-solid fa-circle-info"></i>
+    request(method, parametro, null)
+    //resolve de la promesa
+    .then(listadoCategorias=>{
+        let main = document.getElementById("main");
+        main.classList = "c-main c-main--background-dark"
+        main.innerHTML = `<div id="products" class="c-products"></div>`;
+    
+        let layout = document.getElementById("products");
+        let articulosCategoria = JSON.parse(listadoCategorias).find(c => c.id == id);
+    
+        articulosCategoria.articulos.forEach(p => {
+            layout.innerHTML += `<div class="c-item">
+                                    <div class="c-item__title l-flex l-flex--align-items-center l-flex--justify-content-center">${p.nombre.toUpperCase()}</div>
+                                    <div id="${p.id}" class="c-item__img"></div>
+                                    <div class="c-item__footer l-flex l-flex--align-items-center">
+                                        <div class="c-item__icon c-item__icon--left">
+                                            <i id="${p.id}" class="c-icon fa-solid fa-circle-info"></i>
+                                        </div>
+                                        <div class="c-item__price">${p.precio.toFixed(2)} €</div>
+                                        <div class="c-item__icon c-item__icon--right">
+                                            <i class="c-icon c-icon--alternativo fa-solid fa-cart-plus" ></i>
+                                        </div>
                                     </div>
-                                    <div class="c-item__price">${p.precio.toFixed(2)} €</div>
-                                    <div class="c-item__icon c-item__icon--right">
-                                        <i  class="c-icon c-icon--alternativo fa-solid fa-cart-plus" ></i>
-                                    </div>
-                                </div>
-                            </div>`;
-    });
-
-    let images = layout.getElementsByClassName("c-item__img");
-    for (let img of images) {
-        let rutaImg = "url('./assets/img/fotosProductos/" + img.id + ".jpg')";
-        img.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0),80%, rgb(227, 219, 206))," + rutaImg;
-    }
-
-    let infoIcon = layout.getElementsByClassName("fa-circle-info");
-    for (let icon of infoIcon) {
-        icon.addEventListener('click', modalDetalleProducto)
-    }
+                                </div>`;
+        });
+    
+        let images = layout.getElementsByClassName("c-item__img");
+        for (let img of images) {
+            let rutaImg = "url('./assets/img/fotosProductos/producto_" + img.id + ".jpg')";
+            img.style.backgroundImage = "linear-gradient(to bottom, rgba(255, 255, 255, 0),80%, rgb(227, 219, 206))," + rutaImg;
+        }
+    
+        let infoIcon = layout.getElementsByClassName("fa-circle-info");
+        for (let icon of infoIcon) {
+            icon.onclick = () => mostrarDetalleProducto(id, icon.id)
+        }
+    })
+    
+    
 }
 
 function fadeAnimation(modalId) {
@@ -94,7 +117,6 @@ function modalLogin() {
     document.getElementById("registro").onclick = modalRegistro;
     dialog.showModal();
 }
-
 
 function modalRegistro() {
     let dialog = document.getElementById("dialog");
@@ -147,14 +169,70 @@ function modalHistorialCarrito() {
     dialog.showModal();
 }
 
-function modalDetalleProducto() {
+function mostrarDetalleProducto(idCategoria, idArticulo) {
     let dialog = document.getElementById("dialog");
     dialog.close();
-    let modal = modals.find(m => m.id == "detalleProducto");
 
-    dialog.classList = "c-modal " + modal.tamanyo + " detalleProductoModal";
-    dialog.innerHTML = modal.code;
+    //declaracion de parametros que pasaremos al request
+    const parametro = "categorias";
+    const method = "get";
 
-    fadeAnimation("detalleProductoModal");
-    dialog.showModal();
+    //promesa para pintar las categorias
+    request(method, parametro, null)
+    //resolve de la promesa
+    .then(listadoCategorias=>{
+        let categoria = JSON.parse(listadoCategorias).find(c=> c.id == idCategoria);
+        let articulo = categoria.articulos.find(a=> a.id == idArticulo);
+
+        dialog.classList = "c-modal c-modal--large detalleProductoModal";
+        dialog.innerHTML = `<div class="c-bubble">
+            <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between g--margin-bottom-5">
+            <div class="c-title">${articulo.nombre}</div>
+            <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
+            </div>
+            <div class="l-columns">
+            <img src="assets/img/fotosProductos/producto_${articulo.id}.jpg" class="c-img c-img--big">
+            <div
+                class="c-bubble c-bubble--dark g--margin-5 l-flex l-flex--direction-column l-flex--justify-content-space-between">
+                <div class="c-text">${articulo.descripcion}</div>
+                <div class="l-flex l-flex--justify-content-space-between">
+                <div class="c-title c-title--alternativo-secundario c-title--medium">${articulo.precio} €</div>
+                <button class="c-button"><i class="fa-solid fa-cart-plus g--margin-right-4"></i>Añadir</button>
+                </div>
+            </div>
+            </div>
+        </div>`;
+        fadeAnimation("detalleProductoModal");
+        dialog.showModal();
+    })
+    .catch(error=>{
+        console.log("Error")});
 }
+
+function request(method, parametro, body=null) {
+
+    return new Promise((resolve,reject) => {
+
+        let xhr = new XMLHttpRequest();
+
+            xhr.open(method, `http://localhost:3000/${parametro}`);
+
+            xhr.setRequestHeader("Content-type", "application/Json;charset=utf-8");
+
+            xhr.response = "JSON";
+   
+            xhr.send();
+    
+            xhr.onload =  () => {
+                
+                if (xhr.status == 200) {
+                    resolve(xhr.response);                    
+                } else {
+                    reject(console.log("ERROR " + xhr.status + " " + xhr.statusText));
+                }   
+            }
+        }      
+
+    )
+        
+};

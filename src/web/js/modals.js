@@ -215,27 +215,5 @@ let modals = [
                     </div>
                 </div>
             </div>`
-    },
-    {
-        id: "detalleProducto",
-        tamanyo: "c-modal--large",
-        code: `<div class="c-bubble">
-                <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between g--margin-bottom-5">
-                <div class="c-title">Croissant</div>
-                <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
-                </div>
-                <div class="l-columns">
-                <img src="assets/img/croissants.png" class="c-img c-img--big">
-                <div
-                    class="c-bubble c-bubble--dark g--margin-5 l-flex l-flex--direction-column l-flex--justify-content-space-between">
-                    <div class="c-text">Desde París con amor. Un clásico de nuestro aparador.
-                    Elaborado con largos reposos, ingredientes naturales y mantequilla de la máxima calidad.</div>
-                    <div class="l-flex l-flex--justify-content-space-between">
-                    <div class="c-title c-title--alternativo-secundario c-title--medium">0.50 €</div>
-                    <button class="c-button"><i class="fa-solid fa-cart-plus g--margin-right-4"></i>Comprar</button>
-                    </div>
-                </div>
-                </div>
-            </div>`
     }
 ]
