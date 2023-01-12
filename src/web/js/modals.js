@@ -215,5 +215,65 @@ let modals = [
                     </div>
                 </div>
             </div>`
+    },
+    {
+        id: "detalleCarritoHistorial",
+        tamanyo: "c-modal--large",
+        code: `<div class="c-bubble">
+                    <div class="l-flex l-flex--align-items-center l-flex--justify-content-space-between g--margin-bottom-5">
+                        <div class="c-title">Carrito 247 detalle historial</div>
+                        <i class="c-icon c-icon--close fa-sharp fa-solid fa-xmark close"></i>
+                    </div>
+                <div class="c-cart-row c-cart-row--bold">
+                    <div></div>
+                    <div>Nombre</div>
+                    <div>Descripción</div>
+                    <div>Precio</div>
+                    <div>Unidades</div>
+                    <div>Total</div>
+                    <div></div>
+                </div>
+                <div class="c-cart-row">
+                    <img src="./assets/img/fotosProductos/producto_2.jpg" class="c-cart-row__img">
+                    <div>Café cortado</div>
+                    <div>Lorem ipsum dolor sit amet, conse adipiscing.</div>
+                    <div>0.80 €</div>
+                    <div>1</div>
+                    <div>0.80 €</div>
+                    <div>
+                    </div>
+                </div>
+                <div class="c-cart-row">
+                    <img src="./assets/img/fotosProductos/producto_22.jpg" class="c-cart-row__img">
+                    <div>Bocadillo completo</div>
+                    <div>Lorem ipsum dolor sit amet, conse adipiscing.</div>
+                    <div>2.00 €</div>
+                    <div>1</div>
+                    <div>2.00 €</div>
+                    <div>
+                        <button class="c-button">+</button>
+                        <button class="c-button">-</button>
+                        <button class="c-button c-button--terciario">Eliminar</button>
+                    </div>
+                </div>
+                <div class="c-cart-row">
+                    <img class="c-cart-row__img" src="./assets/img/bocadillos.jpg">
+                    <div>Caracolas</div>
+                    <div>Lorem ipsum dolor sit amet, conse adipiscing.</div>
+                    <div>0.50 €</div>
+                    <div>3</div>
+                    <div>1.50 €</div>
+                    <div>
+                        <button class="c-button">+</button>
+                        <button class="c-button">-</button>
+                        <button class="c-button c-button--terciario">Eliminar</button>
+                    </div>
+                </div>
+            
+                <div class="c-cart-row__footer l-flex l-flex--align-items-center l-flex--justify-content-space-between">
+                    <div class="c-title">Total: 4.30 €</div>
+                    <button id="pago" class="c-button">Confirmar carrito</button>
+                </div>
+            </div>`
     }
 ]

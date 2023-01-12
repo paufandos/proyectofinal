@@ -165,7 +165,20 @@ function modalHistorialCarrito() {
 
     fadeAnimation("historialCarritoModal");
     let eyeIcon = document.getElementById("aversiva");
-    eyeIcon.addEventListener('click', modalCarrito);
+    eyeIcon.addEventListener('click', modalDetalleCarritoHistorial);
+    dialog.showModal();
+}
+
+function modalDetalleCarritoHistorial() {
+    let dialog = document.getElementById("dialog");
+    dialog.close();
+    let modal = modals.find(m => m.id == "detalleCarritoHistorial");
+
+    dialog.classList = "c-modal " + modal.tamanyo + " detalleCarritoHistorialModal";
+    dialog.innerHTML = modal.code;
+
+    fadeAnimation("detalleCarritoHistorialModal");
+
     dialog.showModal();
 }
 
